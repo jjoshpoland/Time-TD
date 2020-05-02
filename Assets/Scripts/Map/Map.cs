@@ -1,0 +1,131 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEditor;
+using UnityEngine.UI;
+
+namespace TD.Map
+{
+    public class Map : MonoBehaviour
+    {
+        [SerializeField]
+        int Size;
+        [SerializeField]
+        int CellSize;
+        [SerializeField]
+        Canvas GridCanvas;
+
+        public Text CellTextLabel;
+        public Cell CellPrefab;
+
+        Cell[,] grid;
+
+        // Start is called before the first frame update
+        void Start()
+        {
+
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+
+        }
+
+        /// <summary>
+        /// Instantiate a new grid of cells in a square, taking their size into account for cell placement
+        /// </summary>
+        public void GenerateGridInEditor()
+        {
+            DestroyGridInEditor();
+
+            grid = new Cell[Size, Size];
+
+            for (int x = 0; x < Size; x++)
+            {
+                for (int y = 0; y < Size; y++)
+                {
+                    CreateCell(x, y);
+                }
+            }
+        }
+
+        void CreateCell(int x, int y)
+        {
+            //Instantiate and position cell
+            Cell newCell = Instantiate(CellPrefab, transform);
+            grid[x, y] = newCell;
+            newCell.transform.localPosition = new Vector3(x * CellSize, 0, y * CellSize);
+            newCell.Coords = new Vector2Int(x, y);
+
+            //Instantiate and position cell label
+            Text label = Instantiate(CellTextLabel);
+            label.rectTransform.SetParent(GridCanvas.transform, false);
+            label.rectTransform.anchoredPosition = new Vector2(newCell.transform.position.x, newCell.transform.position.z);
+            label.text = x.ToString() + "\n" + y.ToString();
+        }
+
+        /// <summary>
+        /// Destroy all cells in the grid and sets the grid to null. To be called in Play Mode.
+        /// </summary>
+        public void DestroyGrid()
+        {
+            if(grid == null || grid.Length == 0)
+            {
+                return;
+            }
+
+            for (int x = 0; x < Size; x++)
+            {
+                for (int y = 0; y < Size; y++)
+                {
+                    Cell cell = grid[x, y];
+                    if(cell != null)
+                    {
+                        Destroy(cell);
+                    }
+                }
+            }
+
+            grid = null;
+        }
+
+        public void DestroyGridInEditor()
+        {
+            Component[] textLabels = GridCanvas.GetComponentsInChildren<Text>();
+            for (int i = 0; i < textLabels.Length; i++)
+            {
+                DestroyImmediate(textLabels[i].gameObject);
+            }
+
+            Component[] cells = GetComponentsInChildren<Cell>();
+            for (int i = 0; i < cells.Length; i++)
+            {
+                DestroyImmediate(cells[i].gameObject);
+            }
+
+            grid = new Cell[Size, Size];
+        }
+    }
+
+    [CustomEditor(typeof(Map))]
+    public class MapEditor : Editor
+    {
+        public override void OnInspectorGUI()
+        {
+            DrawDefaultInspector();
+
+            Map map = (Map)target;
+
+            if(GUILayout.Button("Generate"))
+            {
+                map.GenerateGridInEditor();
+            }
+            if (GUILayout.Button("Destroy"))
+            {
+                map.DestroyGridInEditor();
+            }
+        }
+    }
+}
+
