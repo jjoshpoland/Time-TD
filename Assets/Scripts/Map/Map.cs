@@ -50,6 +50,8 @@ namespace TD.Map
             }
         }
 
+        //TODO: generate in play mode that calls the destroy in play mode first instead of destroy in editor mode
+
         void CreateCell(int x, int y)
         {
             //Instantiate and position cell
@@ -62,7 +64,7 @@ namespace TD.Map
             Text label = Instantiate(CellTextLabel);
             label.rectTransform.SetParent(GridCanvas.transform, false);
             label.rectTransform.anchoredPosition = new Vector2(newCell.transform.position.x, newCell.transform.position.z);
-            label.text = x.ToString() + "\n" + y.ToString();
+            label.text = x.ToString() + "," + y.ToString();
         }
 
         /// <summary>
@@ -90,6 +92,9 @@ namespace TD.Map
             grid = null;
         }
 
+        /// <summary>
+        /// Destroys all game objects spawned by this map. To be called in Editor Mode.
+        /// </summary>
         public void DestroyGridInEditor()
         {
             Component[] textLabels = GridCanvas.GetComponentsInChildren<Text>();
@@ -105,6 +110,27 @@ namespace TD.Map
             }
 
             grid = new Cell[Size, Size];
+        }
+
+        /// <summary>
+        /// Returns the position of the nearest valid coordinate on the map
+        /// </summary>
+        /// <param name="position"></param>
+        /// <returns></returns>
+        public Vector3 GetClosestCoordinatePosition(Vector3 position)
+        {
+            int x = Mathf.RoundToInt(position.x / CellSize);
+            int z = Mathf.RoundToInt(position.z / CellSize);
+
+            int xMax = Size;
+            int zMax = Size;
+
+            x = Mathf.Clamp(x, 0, xMax - 1);
+            z = Mathf.Clamp(z, 0, zMax - 1);
+
+            //TODO: check if the cell at the calculated coordinates contains a map tile
+
+            return new Vector3(x * CellSize, transform.position.y, z * CellSize);
         }
     }
 

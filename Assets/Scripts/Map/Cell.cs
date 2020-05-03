@@ -19,11 +19,7 @@ namespace TD.Map
 
         }
 
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
+        
     }
 
 }
