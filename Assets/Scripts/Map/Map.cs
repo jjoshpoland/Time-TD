@@ -128,6 +128,8 @@ namespace TD.Map
             x = Mathf.Clamp(x, 0, xMax - 1);
             z = Mathf.Clamp(z, 0, zMax - 1);
 
+            //TODO: check if the cell at the calculated coordinates contains a map tile
+
             return new Vector3(x * CellSize, transform.position.y, z * CellSize);
         }
     }
