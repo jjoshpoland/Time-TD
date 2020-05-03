@@ -4,6 +4,7 @@ Time Game Jam Project
 See Trello board for more info on any of these
 
 Component list:
+
 Map:
 - Can be added to a scene, should only be one map per scene
 - Select size, cell size, and just use the Generate button in the inspector to create map tiles
