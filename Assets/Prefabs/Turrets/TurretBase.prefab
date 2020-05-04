@@ -168,6 +168,7 @@ GameObject:
   - component: {fileID: 383765718969290654}
   - component: {fileID: 383765718969290655}
   - component: {fileID: 383765718969290648}
+  - component: {fileID: -8085000837804018385}
   m_Layer: 0
   m_Name: TurretBase
   m_TagString: Untagged
@@ -250,3 +251,24 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-8085000837804018385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 383765718969290649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0172ae06248f01940a7d0e0c193a9a7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cost: 0
+  target: {fileID: 0}
+  turretBase: {fileID: 383765718969290649}
+  muzzle: {fileID: 383765718779019918}
+  ProjectilePrefab: {fileID: 0}
+  Range: 10
+  upgradePaths:
+  - {fileID: 5897740827190726887, guid: 3c909c79ab02a364fbe318db8e4712ff, type: 3}
+  - {fileID: 3429557568709819716, guid: aea7e95cbd8cbeb459aca278917c23b3, type: 3}

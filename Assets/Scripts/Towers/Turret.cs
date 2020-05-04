@@ -6,6 +6,7 @@ namespace TD.Towers
 {
     public class Turret : MonoBehaviour
     {
+        public int Cost;
         [SerializeField]
         GameObject target;
         [SerializeField]
@@ -16,6 +17,8 @@ namespace TD.Towers
         GameObject ProjectilePrefab;
         [SerializeField]
         float Range;
+        [SerializeField]
+        List<Turret> upgradePaths;
 
         // Start is called before the first frame update
         void Start()
@@ -28,6 +31,24 @@ namespace TD.Towers
         {
             EvaluateTargets();
             LookAtTarget();
+        }
+
+        /// <summary>
+        /// Returns the turret this turret will upgrade to if the given index is selected
+        /// </summary>
+        /// <param name="index"></param>
+        /// <returns></returns>
+        public Turret GetUpgradePath(int index)
+        {
+            if(index >= 0 && index < upgradePaths.Count)
+            {
+                return upgradePaths[index];
+            }
+            else
+            {
+                Debug.LogError(index + " is invalid for the UpgradePaths list for " + name);
+                return null;
+            }
         }
 
         /// <summary>
