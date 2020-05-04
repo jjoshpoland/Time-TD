@@ -14,18 +14,48 @@ public class SnapToMap : MonoBehaviour
     Map targetMap;
     Vector3 lastPosition;
 
+    bool invalidPosition = false;
+
     /// <summary>
     /// Moves this transform to the nearest valid coordinate on the TD Map
     /// </summary>
     public void SnapToGrid()
     {
-        if(transform.position != lastPosition)
+        targetMap = FindObjectOfType<Map>();
+
+        if(!targetMap.GridGenerated)
         {
-            targetMap = FindObjectOfType<Map>();
+            invalidPosition = true;
+            Debug.LogWarning("Either no map is in the scene or the map needs to be regenerated");
+            return;
+        }
+
+        if (transform.position != lastPosition)
+        {
+            Cell targetCell = targetMap.GetCellAtPosition(transform.position);
+            Cell lastCell = targetMap.GetCellAtPosition(lastPosition);
+            if (targetCell.IsOccupied && targetCell.occupant != gameObject)
+            {
+                invalidPosition = true;
+                return;
+            }
+
+            invalidPosition = false;
             transform.position = targetMap.GetClosestCoordinatePosition(transform.position);
             lastPosition = transform.position;
+            targetCell.occupant = gameObject;
+            lastCell.occupant = null;
         }
         
+    }
+
+    private void OnDrawGizmos()
+    {
+        if(invalidPosition)
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireCube(transform.position, new Vector3(targetMap.CellSize, targetMap.CellSize, targetMap.CellSize));
+        }
     }
 }
 
