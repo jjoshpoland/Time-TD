@@ -18,6 +18,7 @@ namespace TD.Map
         public Text CellTextLabel;
         public Cell CellPrefab;
 
+
         public int CellSize
         {
             get
@@ -57,7 +58,7 @@ namespace TD.Map
         }
 
         /// <summary>
-        /// Instantiate a new grid of cells in a square, taking their size into account for cell placement
+        /// Instantiate a new grid of cells in a square, taking their size into account for cell placement. Then recalculates the placement of all environment objects.
         /// </summary>
         public void GenerateGridInEditor()
         {
@@ -70,6 +71,17 @@ namespace TD.Map
                 for (int y = 0; y < Size; y++)
                 {
                     CreateCell(x, y);
+                }
+            }
+
+            GameObject[] envObjects = GameObject.FindGameObjectsWithTag("Environment");
+
+            for (int i = 0; i < envObjects.Length; i++)
+            {
+                SnapToMap snappableObject = envObjects[i].GetComponent<SnapToMap>();
+                if(snappableObject != null)
+                {
+                    snappableObject.SnapToGrid();
                 }
             }
         }
@@ -170,6 +182,8 @@ namespace TD.Map
 
             return new Vector2Int(x, z);
         }
+
+        
     }
 
     [CustomEditor(typeof(Map))]
