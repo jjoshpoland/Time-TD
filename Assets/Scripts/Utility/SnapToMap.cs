@@ -43,8 +43,12 @@ public class SnapToMap : MonoBehaviour
             invalidPosition = false;
             transform.position = targetMap.GetClosestCoordinatePosition(transform.position);
             lastPosition = transform.position;
-            lastCell.occupant = null;
-            targetCell.occupant = gameObject;
+            if(gameObject.tag == "Environment")
+            {
+                lastCell.occupant = null;
+                targetCell.occupant = gameObject;
+            }
+            
             
         }
         
