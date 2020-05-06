@@ -28,7 +28,7 @@ namespace TD.Managers
         private void Awake()
         {
             spawnQueue = new Queue<GameObject>();
-            lastWaveTime = Time.time;
+            lastWaveTime = Time.time - timeBetweenWaves;
             lastSpawnTime = Time.time;
             lastWave = -1;
         }
@@ -48,25 +48,37 @@ namespace TD.Managers
                     //If the time has passed the alloted time since the last wave, then queue up the spawns for the next wave
                     if(Time.time > lastWaveTime + timeBetweenWaves)
                     {
-                        currentWave = waves[lastWave + 1];
-                        if(currentWave.Mobs.Count > 0)
+                        if(lastWave + 1 < waves.Count)
                         {
-                            for (int i = 0; i < currentWave.Mobs.Count; i++)
+                            currentWave = waves[lastWave + 1];
+                            if (currentWave.Mobs.Count > 0)
                             {
-                                spawnQueue.Enqueue(currentWave.Mobs[i]);
+                                for (int i = 0; i < currentWave.Mobs.Count; i++)
+                                {
+                                    for (int j = 0; j < currentWave.Mobs[i].Quantity; j++)
+                                    {
+                                        spawnQueue.Enqueue(currentWave.Mobs[i].Mob);
+                                    }
+                                }
+                                lastWaveTime = Time.time;
+                                lastWave++;
                             }
-                            lastWaveTime = Time.time;
-
+                            else
+                            {
+                                Debug.LogWarning("No mobs are assigned to the current wave. No spawning will occur");
+                            }
                         }
                         else
                         {
-                            Debug.LogWarning("No mobs are assigned to the current wave. No spawning will occur");
+                            isStarted = false;
+                            Debug.Log("All waves have spawned");
                         }
+                        
                         
                     }
 
                     //If the time has passed the alloted time since the last spawn, spawn the next mob in the queue
-                    if(Time.time > lastSpawnTime + timeBetweenSpawns)
+                    if(spawnQueue.Any() && Time.time > lastSpawnTime + timeBetweenSpawns)
                     {
                         entry.Spawn(spawnQueue.Dequeue());
                         lastSpawnTime = Time.time;

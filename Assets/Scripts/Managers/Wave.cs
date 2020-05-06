@@ -4,10 +4,17 @@ using UnityEngine;
 
 namespace TD.Managers
 {
+    [CreateAssetMenu(fileName = "Wave", menuName = "TD/Wave", order = 0)]
     public class Wave : ScriptableObject
     {
+        public List<MobQuantity> Mobs;
+    }
 
-        public List<GameObject> Mobs;
+    [System.Serializable]
+    public class MobQuantity
+    {
+        public GameObject Mob;
+        public int Quantity;
     }
 }
 
