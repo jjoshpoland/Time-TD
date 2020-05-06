@@ -10,6 +10,20 @@ namespace TD.Map
         [SerializeField]
         Sprite Sprite;
         Vector2Int coords;
+        
+        public GameObject occupant;
+
+        public bool IsOccupied
+        {
+            get
+            {
+                return occupant != null;
+            }
+            private set
+            {
+                IsOccupied = value;
+            }
+        }
 
         public Vector2Int Coords { get => coords; set => coords = value; }
 
