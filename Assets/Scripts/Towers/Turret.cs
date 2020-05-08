@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TD.Projectiles;
 using UnityEngine.AI;
+using UnityEngine.Events;
 
 namespace TD.Towers
 {
@@ -32,6 +33,8 @@ namespace TD.Towers
         public bool Initialized;
         float lastShoot;
 
+        public UnityEvent OnShoot;
+
         // Start is called before the first frame update
         void Start()
         {
@@ -59,6 +62,7 @@ namespace TD.Towers
                 newProjectile.Target = target;
                 newProjectile.behavior.Initialize(newProjectile, turretBase.transform.localRotation);
                 lastShoot = Time.time;
+                OnShoot.Invoke();
             }
             
         }

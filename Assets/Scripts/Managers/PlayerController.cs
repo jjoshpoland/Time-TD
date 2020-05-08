@@ -90,6 +90,14 @@ namespace TD.Managers
             {
                 PlaceTower();
             }
+
+            if(Input.GetMouseButton(1))
+            {
+                if(attachedTower != null)
+                {
+                    Destroy(attachedTower.gameObject);
+                }
+            }
         }
     }
 }

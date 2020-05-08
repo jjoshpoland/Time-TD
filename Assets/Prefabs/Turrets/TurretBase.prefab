@@ -271,7 +271,7 @@ MonoBehaviour:
     type: 3}
   Range: 10
   fireRate: 0.25
-  predictionRate: -0.01
+  predictionRate: 0.27
   icon: {fileID: 0}
   upgradePaths:
   - {fileID: 5897740827190726887, guid: 3c909c79ab02a364fbe318db8e4712ff, type: 3}
