@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEditor;
 using UnityEngine.UI;
 
-namespace TD.Map
+namespace TD.Maps
 {
     public class Map : MonoBehaviour
     {
@@ -48,7 +48,7 @@ namespace TD.Map
         // Start is called before the first frame update
         void Start()
         {
-
+            GenerateGrid();
         }
 
         // Update is called once per frame
@@ -81,12 +81,36 @@ namespace TD.Map
                 SnapToMap snappableObject = envObjects[i].GetComponent<SnapToMap>();
                 if(snappableObject != null)
                 {
-                    snappableObject.SnapToGrid();
+                    snappableObject.OccupyCell();
                 }
             }
         }
 
         //TODO: generate in play mode that calls the destroy in play mode first instead of destroy in editor mode
+        public void GenerateGrid()
+        {
+            DestroyGrid();
+            grid = new Cell[Size, Size];
+
+            for (int x = 0; x < Size; x++)
+            {
+                for (int y = 0; y < Size; y++)
+                {
+                    CreateCell(x, y);
+                }
+            }
+
+            GameObject[] envObjects = GameObject.FindGameObjectsWithTag("Environment");
+
+            for (int i = 0; i < envObjects.Length; i++)
+            {
+                SnapToMap snappableObject = envObjects[i].GetComponent<SnapToMap>();
+                if (snappableObject != null)
+                {
+                    snappableObject.SnapToGrid();
+                }
+            }
+        }
 
         void CreateCell(int x, int y)
         {

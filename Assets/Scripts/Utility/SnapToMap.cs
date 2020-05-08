@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TD.Map;
+using TD.Maps;
 using UnityEditor;
 
 /// <summary>
@@ -32,26 +32,31 @@ public class SnapToMap : MonoBehaviour
 
         if (transform.position != lastPosition)
         {
-            Cell targetCell = targetMap.GetCellAtPosition(transform.position);
-            Cell lastCell = targetMap.GetCellAtPosition(lastPosition);
-            if (targetCell.IsOccupied && targetCell.occupant != gameObject)
-            {
-                invalidPosition = true;
-                return;
-            }
-
-            invalidPosition = false;
-            transform.position = targetMap.GetClosestCoordinatePosition(transform.position);
-            lastPosition = transform.position;
-            if(gameObject.tag == "Environment")
-            {
-                lastCell.occupant = null;
-                targetCell.occupant = gameObject;
-            }
-            
-            
+            OccupyCell();
         }
         
+    }
+
+    public void OccupyCell()
+    {
+        targetMap = FindObjectOfType<Map>();
+
+        Cell targetCell = targetMap.GetCellAtPosition(transform.position);
+        Cell lastCell = targetMap.GetCellAtPosition(lastPosition);
+        if (targetCell.IsOccupied && targetCell.occupant != gameObject)
+        {
+            invalidPosition = true;
+            return;
+        }
+
+        invalidPosition = false;
+        transform.position = targetMap.GetClosestCoordinatePosition(transform.position);
+        lastPosition = transform.position;
+        if (gameObject.tag == "Environment")
+        {
+            lastCell.occupant = null;
+            targetCell.occupant = gameObject;
+        }
     }
 
     private void OnDrawGizmos()

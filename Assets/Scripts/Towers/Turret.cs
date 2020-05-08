@@ -18,7 +18,11 @@ namespace TD.Towers
         [SerializeField]
         float Range;
         [SerializeField]
+        Sprite icon;
+        [SerializeField]
         List<Turret> upgradePaths;
+
+        public bool Initialized;
 
         // Start is called before the first frame update
         void Start()
@@ -29,8 +33,12 @@ namespace TD.Towers
         // Update is called once per frame
         void Update()
         {
-            EvaluateTargets();
-            LookAtTarget();
+            if(Initialized)
+            {
+                EvaluateTargets();
+                LookAtTarget();
+            }
+            
         }
 
         /// <summary>

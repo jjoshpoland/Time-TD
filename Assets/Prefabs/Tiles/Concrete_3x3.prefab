@@ -89,6 +89,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3259602275091338039}
   - component: {fileID: 1295657823013215460}
+  - component: {fileID: -4220045638944970120}
   m_Layer: 0
   m_Name: Concrete_3x3
   m_TagString: Environment
@@ -124,3 +125,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetMap: {fileID: 0}
+--- !u!114 &-4220045638944970120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3259602275090845463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ebea11b28495bd438e1720f2c944985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

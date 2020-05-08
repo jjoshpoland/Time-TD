@@ -10,7 +10,7 @@ public class Exit : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("trigger");
+        Debug.Log("Mob escaped");
         Mob mob = other.gameObject.GetComponent<Mob>();
         if (mob != null)
         {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-namespace TD.Map
+namespace TD.Maps
 {
     public class Cell : MonoBehaviour
     {
