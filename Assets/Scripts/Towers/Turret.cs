@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TD.Projectiles;
+using UnityEngine.AI;
 
 namespace TD.Towers
 {
@@ -14,20 +16,26 @@ namespace TD.Towers
         [SerializeField]
         GameObject muzzle;
         [SerializeField]
-        GameObject ProjectilePrefab;
+        Projectile ProjectilePrefab;
         [SerializeField]
         float Range;
+        [SerializeField]
+        float fireRate;
+        [SerializeField]
+        [Range(-1, 1)]
+        float predictionRate;
         [SerializeField]
         Sprite icon;
         [SerializeField]
         List<Turret> upgradePaths;
 
         public bool Initialized;
+        float lastShoot;
 
         // Start is called before the first frame update
         void Start()
         {
-
+            lastShoot = Time.time;
         }
 
         // Update is called once per frame
@@ -37,6 +45,20 @@ namespace TD.Towers
             {
                 EvaluateTargets();
                 LookAtTarget();
+                Shoot();
+            }
+            
+        }
+
+        void Shoot()
+        {
+            if(Time.time > lastShoot + fireRate && target != null)
+            {
+                Projectile newProjectile = Instantiate(ProjectilePrefab, null);
+                newProjectile.transform.position = muzzle.transform.position;
+                newProjectile.Target = target;
+                newProjectile.behavior.Initialize(newProjectile, turretBase.transform.localRotation);
+                lastShoot = Time.time;
             }
             
         }
@@ -67,7 +89,7 @@ namespace TD.Towers
             if(target != null)
             {
                 //Find the desired rotation by getting the difference between this position and the target position
-                Quaternion targetRotation = Quaternion.LookRotation(target.transform.position - transform.position);
+                Quaternion targetRotation = Quaternion.LookRotation((target.transform.position + (target.GetComponent<NavMeshAgent>().velocity * predictionRate)) - transform.position);
 
                 //Determine the amount of rotation by interpolating between the current rotation and the target rotation by a factor of time
                 Quaternion rotation = Quaternion.Slerp(turretBase.transform.localRotation, targetRotation, 10f * Time.deltaTime); //turn the 20 into a parameter

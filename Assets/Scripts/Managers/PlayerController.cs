@@ -27,9 +27,12 @@ namespace TD.Managers
         void Update()
         {
             HandleInput();
-            //Debug.Log("current cell = " + currentCell + ", and current tower spot = " + currentSpot);
         }
 
+        /// <summary>
+        /// Instantiates the given tower at the position
+        /// </summary>
+        /// <param name="tower"></param>
         public void AttachTowerToMouse(Tower tower)
         {
             if(attachedTower != null)
@@ -40,18 +43,29 @@ namespace TD.Managers
             attachedTower = Instantiate(tower, null);
         }
 
+        /// <summary>
+        /// Places a tower on the Current Spot if the Current Spot is not occupied
+        /// </summary>
         void PlaceTower()
         {
             if(attachedTower != null && currentSpot != null)
             {
-                attachedTower.transform.position = currentCell.transform.position;
-                attachedTower.InitializeTurret();
-                attachedTower = null;
+                if(currentSpot.AddOccupant(attachedTower))
+                {
+                    attachedTower.transform.position = currentCell.transform.position;
+                    attachedTower.InitializeTurret();
+                    attachedTower = null;
+                }
+                
             }
         }
 
+        /// <summary>
+        /// Generic function for handling responses to input events
+        /// </summary>
         void HandleInput()
         {
+            //Check for the current cell and force the currently attached tower to that cell
             Ray inputRay = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
             if (Physics.Raycast(inputRay, out hit))
@@ -71,6 +85,7 @@ namespace TD.Managers
                 }
             }
 
+            //Place the currently attached tower if the user clicks on the spot
             if(Input.GetMouseButton(0))
             {
                 PlaceTower();

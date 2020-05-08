@@ -5,6 +5,9 @@ using UnityEngine.Video;
 
 namespace TD.Towers
 {
+    /// <summary>
+    /// Attach this component to a Game Object to allow a tower to be placed there
+    /// </summary>
     public class TowerSpot : MonoBehaviour
     {
         Tower occupant;
@@ -28,6 +31,11 @@ namespace TD.Towers
             }
         }
         
+        /// <summary>
+        /// Returns true if a tower was succesfully placed on this spot
+        /// </summary>
+        /// <param name="newOccupant"></param>
+        /// <returns></returns>
         public bool AddOccupant(Tower newOccupant)
         {
             if(occupant == null)

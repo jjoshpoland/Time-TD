@@ -267,8 +267,13 @@ MonoBehaviour:
   target: {fileID: 0}
   turretBase: {fileID: 383765718969290649}
   muzzle: {fileID: 383765718779019918}
-  ProjectilePrefab: {fileID: 0}
+  ProjectilePrefab: {fileID: 4511209917970927278, guid: cc9c070b94dcf73408636a59e7bd3509,
+    type: 3}
   Range: 10
+  fireRate: 0.25
+  predictionRate: -0.01
+  icon: {fileID: 0}
   upgradePaths:
   - {fileID: 5897740827190726887, guid: 3c909c79ab02a364fbe318db8e4712ff, type: 3}
   - {fileID: 3429557568709819716, guid: aea7e95cbd8cbeb459aca278917c23b3, type: 3}
+  Initialized: 0
