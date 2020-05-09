@@ -13,6 +13,8 @@ namespace TD.Projectiles
 
         float startTime;
         public float lifeTime;
+        public UnityEvent OnBlocked;
+        public UnityEvent OnHit;
 
         public GameObject Target
         {
@@ -58,6 +60,7 @@ namespace TD.Projectiles
 
         private void OnCollisionEnter(Collision collision)
         {
+            behavior.Hit(this, collision.gameObject);
             Destroy(gameObject);
         }
     }

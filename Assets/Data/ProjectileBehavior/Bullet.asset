@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: Bullet
   m_EditorClassIdentifier: 
   speed: 15
+  type: 0
+  damage: 1

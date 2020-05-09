@@ -17,6 +17,12 @@ namespace TD.Projectiles
         /// </summary>
         /// <param name="projectile"></param>
         public abstract void Initialize(Projectile projectile, Quaternion rotation);
+
+        /// <summary>
+        /// Called when this projectile impacts its target
+        /// </summary>
+        /// <param name="projectile"></param>
+        public abstract void Hit(Projectile projectile, GameObject target);
     }
 }
 
