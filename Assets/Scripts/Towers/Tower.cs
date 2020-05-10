@@ -29,6 +29,11 @@ namespace TD.Towers
 
         }
 
+        public void InitializeTurret()
+        {
+            Turret.Initialized = true;
+        }
+
         public void Sell()
         {
             //get Time bank object, refund time based on Turret.Cost;
@@ -47,6 +52,7 @@ namespace TD.Towers
             if(newTurret != null)
             {
                 Turret = Instantiate(newTurret, transform);
+                InitializeTurret();
                 Destroy(oldTurret.gameObject);
                 name = Turret.name;
                 OnUpgrade.Invoke();

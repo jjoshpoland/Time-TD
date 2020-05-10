@@ -34,14 +34,6 @@ Transform:
   m_Father: {fileID: 383765717814759205}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!33 &383765717564527862
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 383765717564527858}
-  m_Mesh: {fileID: -2432090755550338912, guid: 5b27da77219b67b4b963c3e17a39e3ac, type: 3}
 --- !u!23 &383765717564527863
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -259,8 +251,12 @@ MonoBehaviour:
   target: {fileID: 0}
   turretBase: {fileID: 383765718969290649}
   muzzle: {fileID: 383765718779019918}
-  ProjectilePrefab: {fileID: 0}
+  ProjectilePrefab: {fileID: 4511209917970927278, guid: cc9c070b94dcf73408636a59e7bd3509,
+    type: 3}
   Range: 10
+  fireRate: 0.25
+  predictionRate: 0.27
+  icon: {fileID: 0}
   upgradePaths:
   - {fileID: 5897740827190726887, guid: 3c909c79ab02a364fbe318db8e4712ff, type: 3}
   - {fileID: 3429557568709819716, guid: aea7e95cbd8cbeb459aca278917c23b3, type: 3}
@@ -276,5 +272,4 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 383765718969290649}
   m_Mesh: {fileID: -2432090755550338912, guid: b7bd92ceb1a342b4e9636a4d8c30ad0d, type: 3}
-
 
