@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 383765717564527858}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0.413}
+  m_LocalPosition: {x: 0, y: -0.15, z: 0.413}
   m_LocalScale: {x: 0.25, y: 0.5, z: 0.25000006}
   m_Children:
   - {fileID: 383765718779019917}
@@ -41,7 +41,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 383765717564527858}
-  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: -2432090755550338912, guid: 5b27da77219b67b4b963c3e17a39e3ac, type: 3}
 --- !u!23 &383765717564527863
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -165,10 +165,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 383765718969290653}
-  - component: {fileID: 383765718969290654}
   - component: {fileID: 383765718969290655}
   - component: {fileID: 383765718969290648}
   - component: {fileID: -8085000837804018385}
+  - component: {fileID: 4432299841446062364}
   m_Layer: 0
   m_Name: TurretBase
   m_TagString: Untagged
@@ -184,21 +184,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 383765718969290649}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.75, z: 0}
+  m_LocalPosition: {x: -0.1, y: 0.75, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 383765717814759205}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &383765718969290654
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 383765718969290649}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &383765718969290655
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -272,3 +264,18 @@ MonoBehaviour:
   upgradePaths:
   - {fileID: 5897740827190726887, guid: 3c909c79ab02a364fbe318db8e4712ff, type: 3}
   - {fileID: 3429557568709819716, guid: aea7e95cbd8cbeb459aca278917c23b3, type: 3}
+<<<<<<< Updated upstream
+=======
+  Initialized: 0
+  OnShoot:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!33 &4432299841446062364
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 383765718969290649}
+  m_Mesh: {fileID: -2432090755550338912, guid: b7bd92ceb1a342b4e9636a4d8c30ad0d, type: 3}
+>>>>>>> Stashed changes
