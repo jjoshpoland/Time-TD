@@ -21,6 +21,7 @@ public class HealthBar : MonoBehaviour
         transform.parent = null;
         health.OnTakeDamage.AddListener(UpdateHealthBar);
         health.OnDie.AddListener(Die);
+        health.OnDelete.AddListener(Die);
     }
     // Start is called before the first frame update
     void Start()

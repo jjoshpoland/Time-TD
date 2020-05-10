@@ -13,6 +13,7 @@ public class Health : MonoBehaviour
     public DamageType[] immunities;
     public UnityEvent OnTakeDamage;
     public UnityEvent OnDie;
+    public UnityEvent OnDelete;
 
     public int MaxHP
     {
@@ -64,6 +65,7 @@ public class Health : MonoBehaviour
         OnDie.Invoke();
         Destroy(gameObject);
     }
+
 }
 
 public enum DamageType
