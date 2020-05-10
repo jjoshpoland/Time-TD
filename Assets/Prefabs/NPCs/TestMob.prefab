@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 7537696918472478661}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.14217, y: 1, z: 0.36064}
-  m_LocalScale: {x: 0.253548, y: 0.253548, z: 0.253548}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4647099327019647562}
   - {fileID: 2344270154120701891}
@@ -54,7 +54,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7537696918472478661}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -328,15 +328,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 842bf22ba409fb74ab5d73233d377f91, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.3820578
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 842bf22ba409fb74ab5d73233d377f91, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.37689117
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 842bf22ba409fb74ab5d73233d377f91, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.3768911
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 842bf22ba409fb74ab5d73233d377f91, type: 3}
