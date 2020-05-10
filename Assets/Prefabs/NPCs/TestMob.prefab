@@ -163,10 +163,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HP: 10
   immunities: 
+  floatingTextPrefab: {fileID: 2957037170606973458, guid: 07ae08db9fbec43429a5379c4f4ed0e6,
+    type: 3}
+  randomTextIntensity: {x: 1, y: 0, z: 0}
   OnTakeDamage:
     m_PersistentCalls:
       m_Calls: []
   OnDie:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDelete:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1001 &642222240594119497

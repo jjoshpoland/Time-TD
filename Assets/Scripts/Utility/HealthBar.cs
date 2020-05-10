@@ -10,6 +10,7 @@ public class HealthBar : MonoBehaviour
     Slider bar;
     [SerializeField]
     Canvas canvas;
+    
 
     private void Awake()
     {
@@ -34,6 +35,8 @@ public class HealthBar : MonoBehaviour
     {
         
     }
+
+    
 
     void UpdateHealthBar()
     {
