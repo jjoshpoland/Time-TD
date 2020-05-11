@@ -134,6 +134,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c54053bfd7a2ea439b876d5433bcd6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TimeValue: 0.5
+  OnDie:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDelete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!54 &8669195585956559957
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -16,6 +16,18 @@ namespace TD.Towers
         public UnityEvent OnUpgrade;
         public UnityEvent OnSell;
 
+        public float Cost
+        {
+            get
+            {
+                return Turret.Cost;
+            }
+            private set
+            {
+                return;
+            }
+        }
+
         // Start is called before the first frame update
         void Start()
         {

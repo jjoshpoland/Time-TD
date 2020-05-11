@@ -263,7 +263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0172ae06248f01940a7d0e0c193a9a7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Cost: 0
+  Cost: 3
   target: {fileID: 0}
   turretBase: {fileID: 383765718969290649}
   muzzle: {fileID: 383765718779019918}
@@ -277,3 +277,6 @@ MonoBehaviour:
   - {fileID: 5897740827190726887, guid: 3c909c79ab02a364fbe318db8e4712ff, type: 3}
   - {fileID: 3429557568709819716, guid: aea7e95cbd8cbeb459aca278917c23b3, type: 3}
   Initialized: 0
+  OnShoot:
+    m_PersistentCalls:
+      m_Calls: []

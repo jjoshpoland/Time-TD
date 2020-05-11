@@ -54,6 +54,7 @@ namespace TD.Managers
                 {
                     attachedTower.transform.position = currentCell.transform.position;
                     attachedTower.InitializeTurret();
+                    ClockManager.instance.RemoveTime(attachedTower.Cost);
                     attachedTower = null;
                 }
                 

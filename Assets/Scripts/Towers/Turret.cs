@@ -9,7 +9,7 @@ namespace TD.Towers
 {
     public class Turret : MonoBehaviour
     {
-        public int Cost;
+        public float Cost;
         [SerializeField]
         GameObject target;
         [SerializeField]
