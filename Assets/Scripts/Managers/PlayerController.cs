@@ -53,7 +53,7 @@ namespace TD.Managers
                 if(currentSpot.AddOccupant(attachedTower))
                 {
                     attachedTower.transform.position = currentCell.transform.position;
-                    attachedTower.InitializeTurret();
+                    attachedTower.InitializeTurret(ClockManager.instance.TimeScale);
                     ClockManager.instance.RemoveTime(attachedTower.Cost);
                     attachedTower = null;
                 }

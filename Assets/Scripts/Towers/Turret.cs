@@ -25,10 +25,13 @@ namespace TD.Towers
         [SerializeField]
         [Range(-1, 1)]
         float predictionRate;
+        public float scale;
         [SerializeField]
         Sprite icon;
         [SerializeField]
         List<Turret> upgradePaths;
+        
+
 
         public bool Initialized;
         float lastShoot;
@@ -38,6 +41,7 @@ namespace TD.Towers
         // Start is called before the first frame update
         void Start()
         {
+            scale = 1f;
             lastShoot = Time.time;
         }
 
@@ -61,6 +65,7 @@ namespace TD.Towers
                 newProjectile.transform.position = muzzle.transform.position;
                 newProjectile.Target = target;
                 newProjectile.behavior.Initialize(newProjectile, turretBase.transform.localRotation);
+                newProjectile.Scale = scale;
                 lastShoot = Time.time;
                 OnShoot.Invoke();
             }

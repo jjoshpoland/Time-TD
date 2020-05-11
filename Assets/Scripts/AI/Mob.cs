@@ -13,8 +13,21 @@ namespace TD.AI
         NavMeshAgent agent;
         Health health;
         public float TimeValue;
+        public float speed;
         public FloatEvent OnDie;
         public FloatEvent OnDelete;
+
+        public float Scale
+        {
+            get
+            {
+                return agent.speed / speed;
+            }
+            set
+            {
+                agent.speed = speed * value;
+            }
+        }
         private void Awake()
         {
             agent = GetComponent<NavMeshAgent>();
@@ -31,7 +44,15 @@ namespace TD.AI
 
         private void Start()
         {
+            agent.speed = speed;
             health.OnDie.AddListener(Die);
+        }
+
+       
+
+        public void RevertSpeed()
+        {
+            agent.speed = speed;
         }
 
         /// <summary>

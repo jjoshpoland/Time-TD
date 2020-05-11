@@ -50,6 +50,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TimeValue: 1
+  speed: 3.5
   OnDie:
     m_PersistentCalls:
       m_Calls: []

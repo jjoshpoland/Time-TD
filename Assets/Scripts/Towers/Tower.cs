@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TD.Managers;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -41,8 +42,9 @@ namespace TD.Towers
 
         }
 
-        public void InitializeTurret()
+        public void InitializeTurret(float scale)
         {
+            Turret.scale = scale;
             Turret.Initialized = true;
         }
 
@@ -64,7 +66,7 @@ namespace TD.Towers
             if(newTurret != null)
             {
                 Turret = Instantiate(newTurret, transform);
-                InitializeTurret();
+                InitializeTurret(oldTurret.GetComponent<Turret>().scale);
                 Destroy(oldTurret.gameObject);
                 name = Turret.name;
                 OnUpgrade.Invoke();

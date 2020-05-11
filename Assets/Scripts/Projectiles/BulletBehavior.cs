@@ -40,9 +40,9 @@ namespace TD.Projectiles
             projectile.transform.rotation = rotation;
         }
 
-        public override void Move(Projectile projectile)
+        public override void Move(Projectile projectile, float scale)
         {
-            projectile.transform.position += (projectile.transform.forward * speed) * Time.deltaTime;
+            projectile.transform.position += (projectile.transform.forward * (speed * scale)) * Time.deltaTime;
         }
 
 
