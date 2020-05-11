@@ -1,17 +1,26 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TD.Towers;
 using TD.Maps;
+using UnityEngine.EventSystems;
 
 namespace TD.Managers
 {
     public class PlayerController : MonoBehaviour
     {
+        [SerializeField]
+        TowerMenu TowerMenuPrefab;
+        [SerializeField]
+        Canvas mainCanvas;
         Map mainMap;
         Cell currentCell;
         TowerSpot currentSpot;
         Tower attachedTower;
+        Tower currentTower;
+
+        TowerMenu currentMenu;
 
         private void Awake()
         {
@@ -37,7 +46,7 @@ namespace TD.Managers
         {
             if(attachedTower != null)
             {
-                Destroy(attachedTower);
+                Destroy(attachedTower.gameObject);
             }
 
             attachedTower = Instantiate(tower, null);
@@ -46,7 +55,7 @@ namespace TD.Managers
         /// <summary>
         /// Places a tower on the Current Spot if the Current Spot is not occupied
         /// </summary>
-        void PlaceTower()
+        bool PlaceTower()
         {
             if(attachedTower != null && currentSpot != null)
             {
@@ -56,9 +65,56 @@ namespace TD.Managers
                     attachedTower.InitializeTurret(ClockManager.instance.TimeScale);
                     ClockManager.instance.RemoveTime(attachedTower.Cost);
                     attachedTower = null;
+                    return true;
                 }
                 
             }
+            return false;
+        }
+
+        void ActivateTowerMenu()
+        {
+            
+            //if placing a tower, a menu should not be activated
+            if(attachedTower != null)
+            {
+                return;
+            }
+            //if another menu is active, don't just make more
+            if(currentMenu != null)
+            {
+                return;
+            }
+            
+            //if there is something in that cell
+            if (currentCell.occupant != null)
+            {
+                Debug.Log("placing menu");
+                //and that something is a tower spot
+                currentSpot = currentCell.occupant.GetComponent<TowerSpot>();
+                if(currentSpot != null)
+                {
+                    //and the tower spot contains a tower
+                    currentTower = currentSpot.Occupant;
+                    if (currentTower != null)
+                    {
+                        //instantiate tower menu object on canvas at tower point
+                        //hook tower up to menu buttons
+                        //pause game
+
+                        currentMenu = Instantiate(TowerMenuPrefab, mainCanvas.transform);
+                        currentMenu.GetComponent<RectTransform>().anchoredPosition = currentCell.transform.position;
+                        currentMenu.Init(currentTower);
+                    }
+                }
+                
+            }
+        }
+
+        void DeactivateTowerMenu()
+        {
+            //destroy tower menu object
+            currentTower = null;
         }
 
         /// <summary>
@@ -75,11 +131,13 @@ namespace TD.Managers
                 currentCell = mainMap.GetCellAtPosition(hit.point);
                 if(currentCell != null)
                 {
+                    //if a tower is attached to cursor, place it
                     if(attachedTower != null)
                     {
                         attachedTower.transform.position = currentCell.transform.position;
+
                     }
-                    if(currentCell.occupant != null)
+                    if (currentCell.occupant != null)
                     {
                         currentSpot = currentCell.occupant.GetComponent<TowerSpot>();
                     }
@@ -87,9 +145,13 @@ namespace TD.Managers
             }
 
             //Place the currently attached tower if the user clicks on the spot
-            if(Input.GetMouseButton(0))
+            if(Input.GetMouseButtonUp(0) && !EventSystem.current.IsPointerOverGameObject())
             {
-                PlaceTower();
+                if(!PlaceTower())
+                {
+                    ActivateTowerMenu();
+                }
+                
             }
 
             if(Input.GetMouseButton(1))

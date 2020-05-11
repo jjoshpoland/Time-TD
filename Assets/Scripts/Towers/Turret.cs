@@ -29,7 +29,7 @@ namespace TD.Towers
         [SerializeField]
         Sprite icon;
         [SerializeField]
-        List<Turret> upgradePaths;
+        public List<Turret> upgradePaths;
         
 
 

@@ -42,6 +42,19 @@ namespace TD.Towers
 
         }
 
+        public Turret GetUpgradePath(int index)
+        {
+            if(Turret.upgradePaths.Count > 0 && Turret.upgradePaths.Count > index)
+            {
+                return Turret.upgradePaths[index];
+            }
+            else
+            {
+                Debug.LogWarning("Cannot get an upgrade path for " + name + " or the index " + index + "is out of range");
+                return null;
+            }
+        }
+
         public void InitializeTurret(float scale)
         {
             Turret.scale = scale;

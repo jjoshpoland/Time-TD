@@ -12,6 +12,18 @@ namespace TD.Towers
     {
         Tower occupant;
 
+        public Tower Occupant
+        {
+            get
+            {
+                return occupant;
+            }
+            private set
+            {
+                occupant = value;
+            }
+        }
+
         public bool IsOccupied
         {
             get
