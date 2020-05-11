@@ -10,7 +10,7 @@ namespace TD.Projectiles
         /// Called every frame by the projectile
         /// </summary>
         /// <param name="projectile"></param>
-        public abstract void Move(Projectile projectile);
+        public abstract void Move(Projectile projectile, float scale);
 
         /// <summary>
         /// Called once (probably by a turret) when the projectile is instantiated

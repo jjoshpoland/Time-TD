@@ -13,8 +13,10 @@ namespace TD.Projectiles
 
         float startTime;
         public float lifeTime;
+        public float Scale;
         public UnityEvent OnBlocked;
         public UnityEvent OnHit;
+        
 
         public GameObject Target
         {
@@ -49,7 +51,7 @@ namespace TD.Projectiles
             if(behavior != null)
             {
 
-                behavior.Move(this);
+                behavior.Move(this, Scale);
             }
             else
             {

@@ -10,6 +10,7 @@ public class HealthBar : MonoBehaviour
     Slider bar;
     [SerializeField]
     Canvas canvas;
+    
 
     private void Awake()
     {
@@ -21,6 +22,7 @@ public class HealthBar : MonoBehaviour
         transform.parent = null;
         health.OnTakeDamage.AddListener(UpdateHealthBar);
         health.OnDie.AddListener(Die);
+        health.OnDelete.AddListener(Die);
     }
     // Start is called before the first frame update
     void Start()
@@ -33,6 +35,8 @@ public class HealthBar : MonoBehaviour
     {
         
     }
+
+    
 
     void UpdateHealthBar()
     {

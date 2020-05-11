@@ -17,7 +17,7 @@ public class FollowObject : MonoBehaviour
         }
         else
         {
-            Debug.Log(name + "has no target to follow");
+            Debug.Log(name + " has no target to follow");
         }
     }
 }
