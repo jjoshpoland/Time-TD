@@ -15,7 +15,7 @@ public class Exit : MonoBehaviour
         if (mob != null)
         {
             OnMobEnter.Invoke();
-            Destroy(mob.gameObject);
+            mob.Delete();
         }
     }
 
