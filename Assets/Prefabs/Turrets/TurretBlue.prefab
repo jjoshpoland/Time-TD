@@ -9,6 +9,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8085000837804018385, guid: 34f0bcc6a455ecb4893030b07962691f,
         type: 3}
+      propertyPath: upgradePaths.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8085000837804018385, guid: 34f0bcc6a455ecb4893030b07962691f,
+        type: 3}
       propertyPath: upgradePaths.Array.data[0]
       value: 
       objectReference: {fileID: 0}

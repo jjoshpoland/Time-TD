@@ -23,8 +23,28 @@ public class TowerMenu : MonoBehaviour
         this.Turret1 = tower.GetUpgradePath(0);
         this.Turret2 = tower.GetUpgradePath(1);
 
-        UpgradeButton1.GetComponentInChildren<Text>().text = Turret1.name;
-        UpgradeButton2.GetComponentInChildren<Text>().text = Turret2.name;
+        if(Turret2 == null)
+        {
+            Destroy(UpgradeButton2.gameObject);
+        }
+        else
+        {
+            UpgradeButton2.GetComponentInChildren<Text>().text = Turret2.name;
+        }
+
+        if(Turret1 == null)
+        {
+            Destroy(UpgradeButton1.gameObject);
+        }
+        else
+        {
+            UpgradeButton1.GetComponentInChildren<Text>().text = Turret1.name;
+        }
+
+        
+        
+
+        
     }
     // Start is called before the first frame update
     void Start()
@@ -36,6 +56,20 @@ public class TowerMenu : MonoBehaviour
     {
         ClockManager.instance.AddTime(tower.Cost / 2f);
         tower.Sell();
+        Destroy(gameObject);
+    }
+
+    public void Upgrade(int index)
+    {
+        if(index == 0 && Turret1 != null)
+        {
+            tower.Upgrade(index);
+        }
+        else if(index == 1 && Turret2 != null)
+        {
+            tower.Upgrade(index);
+        }
+
         Destroy(gameObject);
     }
 }

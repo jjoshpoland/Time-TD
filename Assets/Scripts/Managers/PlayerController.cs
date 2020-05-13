@@ -89,7 +89,6 @@ namespace TD.Managers
             //if there is something in that cell
             if (currentCell.occupant != null)
             {
-                Debug.Log("placing menu");
                 //and that something is a tower spot
                 currentSpot = currentCell.occupant.GetComponent<TowerSpot>();
                 if(currentSpot != null)
@@ -142,6 +141,12 @@ namespace TD.Managers
                         currentSpot = currentCell.occupant.GetComponent<TowerSpot>();
                     }
                 }
+            }
+
+            if(Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject() && currentMenu != null)
+            {
+                Destroy(currentMenu.gameObject);
+                currentMenu = null;
             }
 
             //Place the currently attached tower if the user clicks on the spot
