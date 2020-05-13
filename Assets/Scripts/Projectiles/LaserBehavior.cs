@@ -1,26 +1,33 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.IO;
 using UnityEngine;
-using UnityEngine.AI;
 
 namespace TD.Projectiles
 {
-    [CreateAssetMenu(fileName = "Bullet", menuName = "TD/Projectiles/Bullet", order = 0)]
-    public class BulletBehavior : ProjectileBehavior
+    [CreateAssetMenu(fileName = "Laser", menuName = "TD/Projectiles/Laser", order = 1)]
+    public class LaserBehavior : ProjectileBehavior
     {
-        public float speed;
-        public DamageType type;
         public int damage;
+        public DamageType type;
 
-        
         public override void Hit(Projectile projectile, GameObject target)
         {
+            
+        }
+
+        public override void Initialize(Projectile projectile, Quaternion rotation)
+        {
+            
+        }
+
+        public override void Move(Projectile projectile, float scale, GameObject target)
+        {
+            projectile.transform.position = target.transform.position; //may need to change this to be a raycast to the target and see where it hits their collider or mesh
             Health targetHealth = target.GetComponent<Health>();
-            if(targetHealth != null)
+            if (targetHealth != null)
             {
                 //if the target wasnt immune, call the projectile on hit event, else call the on blocked event
-                if(targetHealth.TakeDamage(damage, type))
+                if (targetHealth.TakeDamage(damage, type))
                 {
                     projectile.OnHit.Invoke();
                 }
@@ -33,18 +40,9 @@ namespace TD.Projectiles
             {
                 projectile.OnBlocked.Invoke();
             }
-        }
 
-        public override void Initialize(Projectile projectile, Quaternion rotation)
-        {
-            projectile.transform.rotation = rotation;
+            Destroy(projectile.gameObject);
         }
-
-        public override void Move(Projectile projectile, float scale, GameObject target)
-        {
-            projectile.transform.position += (projectile.transform.forward * (speed * scale)) * Time.deltaTime;
-        }
-
 
     }
 }

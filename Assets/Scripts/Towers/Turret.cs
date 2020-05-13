@@ -37,6 +37,32 @@ namespace TD.Towers
         float lastShoot;
 
         public UnityEvent OnShoot;
+        public UnityEvent OnTargetAcquired;
+        public UnityEvent OnTargetLost;
+
+        public GameObject Target
+        {
+            get
+            {
+                return target;
+            }
+            private set
+            {
+                target = value;
+            }
+        }
+
+        public GameObject Muzzle
+        {
+            get
+            {
+                return muzzle;
+            }
+            private set
+            {
+                muzzle = value;
+            }
+        }
 
         // Start is called before the first frame update
         void Start()
@@ -116,6 +142,7 @@ namespace TD.Towers
             if (target != null && Vector3.Distance(transform.position, target.transform.position) > Range)
             {
                 target = null;
+                OnTargetLost.Invoke();
             }
             //then check if there is still a target
             if (target != null)
@@ -150,6 +177,11 @@ namespace TD.Towers
             if(closestEnemy != null)
             {
                 target = closestEnemy;
+                OnTargetAcquired.Invoke();
+            }
+            else
+            {
+                OnTargetLost.Invoke();
             }
 
         }
