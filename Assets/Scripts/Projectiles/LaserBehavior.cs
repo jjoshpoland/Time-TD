@@ -23,6 +23,11 @@ namespace TD.Projectiles
         public override void Move(Projectile projectile, float scale, GameObject target)
         {
             projectile.transform.position = target.transform.position; //may need to change this to be a raycast to the target and see where it hits their collider or mesh
+
+            
+
+            
+
             Health targetHealth = target.GetComponent<Health>();
             if (targetHealth != null)
             {

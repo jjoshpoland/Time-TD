@@ -197,6 +197,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4187603389787376049, guid: 7a1ad207dd557c94d8a52f0f48a67845,
         type: 3}
+    - target: {fileID: -8085000837804018385, guid: 34f0bcc6a455ecb4893030b07962691f,
+        type: 3}
+      propertyPath: Cost
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -8085000837804018385, guid: 34f0bcc6a455ecb4893030b07962691f,
+        type: 3}
+      propertyPath: fireRate
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 383765718969290649, guid: 34f0bcc6a455ecb4893030b07962691f,
         type: 3}
       propertyPath: m_Name

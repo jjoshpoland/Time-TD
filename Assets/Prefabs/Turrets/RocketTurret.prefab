@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &6677932561087753932
+--- !u!1001 &230353679151365609
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -9,29 +9,24 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8085000837804018385, guid: 34f0bcc6a455ecb4893030b07962691f,
         type: 3}
-      propertyPath: muzzle
-      value: 
-      objectReference: {fileID: 6485078645431708738}
-    - target: {fileID: -8085000837804018385, guid: 34f0bcc6a455ecb4893030b07962691f,
-        type: 3}
       propertyPath: ProjectilePrefab
       value: 
-      objectReference: {fileID: 1472508411515947652, guid: b9223447c02258341b6c57f19e369587,
+      objectReference: {fileID: 3230862415639779360, guid: d0f4cf8852e071b45a97cd717a076853,
         type: 3}
     - target: {fileID: -8085000837804018385, guid: 34f0bcc6a455ecb4893030b07962691f,
         type: 3}
       propertyPath: fireRate
-      value: 1
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: -8085000837804018385, guid: 34f0bcc6a455ecb4893030b07962691f,
         type: 3}
-      propertyPath: Cost
-      value: 8
+      propertyPath: predictionRate
+      value: 0.38
       objectReference: {fileID: 0}
     - target: {fileID: 383765718969290649, guid: 34f0bcc6a455ecb4893030b07962691f,
         type: 3}
       propertyPath: m_Name
-      value: MissileTurret
+      value: RocketTurret
       objectReference: {fileID: 0}
     - target: {fileID: 383765718969290653, guid: 34f0bcc6a455ecb4893030b07962691f,
         type: 3}
@@ -92,12 +87,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 8d95946307324134faacec54df925821, type: 2}
+      objectReference: {fileID: 2100000, guid: f0fa132ec177f9240b794b572c86019f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34f0bcc6a455ecb4893030b07962691f, type: 3}
---- !u!1 &6485078645431708738 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 383765718779019918, guid: 34f0bcc6a455ecb4893030b07962691f,
-    type: 3}
-  m_PrefabInstance: {fileID: 6677932561087753932}
-  m_PrefabAsset: {fileID: 0}

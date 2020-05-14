@@ -29,7 +29,7 @@ public class TowerMenu : MonoBehaviour
         }
         else
         {
-            UpgradeButton2.GetComponentInChildren<Text>().text = Turret2.name;
+            UpgradeButton2.GetComponentInChildren<Text>().text = Turret2.name + " (" + Turret2.Cost + ")";
         }
 
         if(Turret1 == null)
@@ -38,7 +38,7 @@ public class TowerMenu : MonoBehaviour
         }
         else
         {
-            UpgradeButton1.GetComponentInChildren<Text>().text = Turret1.name;
+            UpgradeButton1.GetComponentInChildren<Text>().text = Turret1.name + " (" + Turret1.Cost + ")";
         }
 
         

@@ -10,13 +10,14 @@ PrefabInstance:
     - target: {fileID: -8085000837804018385, guid: 34f0bcc6a455ecb4893030b07962691f,
         type: 3}
       propertyPath: upgradePaths.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8085000837804018385, guid: 34f0bcc6a455ecb4893030b07962691f,
         type: 3}
       propertyPath: upgradePaths.Array.data[1]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 936238418628823238, guid: ef44972d1011c514bb0debfabf02d410,
+        type: 3}
     - target: {fileID: -8085000837804018385, guid: 34f0bcc6a455ecb4893030b07962691f,
         type: 3}
       propertyPath: upgradePaths.Array.data[0]

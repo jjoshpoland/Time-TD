@@ -60,6 +60,19 @@ namespace TD.Projectiles
             }
         }
 
+        public void TriggerEffect(GameObject effect)
+        {
+            Instantiate(effect).transform.position = transform.position;
+        }
+
+        public void TriggerEffectOnTarget(GameObject effect)
+        {
+            if(target != null)
+            {
+                Instantiate(effect).transform.position = target.transform.position;
+            }
+        }
+
         private void OnCollisionEnter(Collision collision)
         {
             behavior.Hit(this, collision.gameObject);

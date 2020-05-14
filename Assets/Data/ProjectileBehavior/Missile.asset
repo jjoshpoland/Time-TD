@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78c66c4c18e6e2744ae353af9466a137, type: 3}
   m_Name: Missile
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 9
   type: 2
   damage: 2
   explosionRadius: 5
-  ExplosionEffect: {fileID: 0}
+  ExplosionEffect: {fileID: 7168705985024274139, guid: 7cc1636a8fa003c46a12a996d22baebc,
+    type: 3}

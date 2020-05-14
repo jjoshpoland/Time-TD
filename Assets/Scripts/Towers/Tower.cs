@@ -50,7 +50,7 @@ namespace TD.Towers
             }
             else
             {
-                Debug.LogWarning("Cannot get an upgrade path for " + name + " or the index " + index + "is out of range");
+                Debug.LogWarning("Cannot get an upgrade path for " + name + " or the index " + index + " is out of range");
                 return null;
             }
         }

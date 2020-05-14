@@ -5,7 +5,15 @@ using UnityEngine;
 public class LookAtCamera : MonoBehaviour
 {
     public Camera cameraToLookAt;
+    public bool lookAtMain;
 
+    private void Start()
+    {
+        if(lookAtMain)
+        {
+            cameraToLookAt = Camera.main;
+        }
+    }
 
     void Update()
     {
