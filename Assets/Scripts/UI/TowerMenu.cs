@@ -17,6 +17,8 @@ public class TowerMenu : MonoBehaviour
     Turret Turret1;
     Turret Turret2;
 
+    
+
     public void Init(Tower tower)
     {
         this.tower = tower;
@@ -63,13 +65,17 @@ public class TowerMenu : MonoBehaviour
     {
         if(index == 0 && Turret1 != null)
         {
+            ClockManager.instance.RemoveTime(tower.GetUpgradePath(index).Cost);
             tower.Upgrade(index);
+            
         }
         else if(index == 1 && Turret2 != null)
         {
+            ClockManager.instance.RemoveTime(tower.GetUpgradePath(index).Cost);
             tower.Upgrade(index);
+            
         }
-
+        
         Destroy(gameObject);
     }
 }

@@ -22,6 +22,12 @@ namespace TD.Projectiles
 
         public override void Move(Projectile projectile, float scale, GameObject target)
         {
+
+            if(target == null)
+            {
+                Destroy(projectile.gameObject);
+                return;
+            }
             projectile.transform.position = target.transform.position; //may need to change this to be a raycast to the target and see where it hits their collider or mesh
 
             

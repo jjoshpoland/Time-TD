@@ -32,6 +32,7 @@ namespace TD.Managers
         // Start is called before the first frame update
         void Start()
         {
+            isStopped = true;
             remainingTime = StartingTime;
         }
 
@@ -51,11 +52,17 @@ namespace TD.Managers
                 {
                     OnZero.Invoke();
                     isStopped = true;
+                    enabled = false;
                 }
             }
             
             Clock.text = TimeSpan.FromSeconds(remainingTime).ToString("mm':'ss':'ff");
             Clock.color = Color.Lerp(Clock.color, Color.white, .01f);
+        }
+
+        public void StartClock()
+        {
+            isStopped = false;
         }
 
         /// <summary>
@@ -64,10 +71,6 @@ namespace TD.Managers
         /// <param name="time">Will be calculated as absolute value</param>
         public void AddTime(float time)
         {
-            if(isStopped)
-            {
-                return;
-            }
             remainingTime += Mathf.Abs(time);
             Clock.color = Color.green;
         }
@@ -78,10 +81,6 @@ namespace TD.Managers
         /// <param name="time">Will be calculated as absolute value</param>
         public void RemoveTime(float time)
         {
-            if (isStopped)
-            {
-                return;
-            }
             remainingTime -= Mathf.Abs(time);
             Clock.color = Color.red;
         }
