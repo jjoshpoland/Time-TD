@@ -207,6 +207,22 @@ PrefabInstance:
       propertyPath: fireRate
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 383765717564527857, guid: 34f0bcc6a455ecb4893030b07962691f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.066
+      objectReference: {fileID: 0}
+    - target: {fileID: 383765717564527857, guid: 34f0bcc6a455ecb4893030b07962691f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.537
+      objectReference: {fileID: 0}
+    - target: {fileID: 383765717564527862, guid: 34f0bcc6a455ecb4893030b07962691f,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 017746e33b765aa45a05a30b4e71d7ff,
+        type: 3}
     - target: {fileID: 383765718969290649, guid: 34f0bcc6a455ecb4893030b07962691f,
         type: 3}
       propertyPath: m_Name
