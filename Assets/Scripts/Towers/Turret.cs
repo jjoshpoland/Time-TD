@@ -144,12 +144,21 @@ namespace TD.Towers
                 target = null;
                 OnTargetLost.Invoke();
             }
+
+            if (target != null && target.GetComponent<Health>().isDead)
+            {
+                target = null;
+                print("Target is Dead");
+                OnTargetLost.Invoke();
+            }
             //then check if there is still a target
             if (target != null)
             {
+                Debug.Log(target.GetComponent<Health>().isDead);
                 return;
             }
             
+
 
             Collider[] hits = Physics.OverlapSphere(transform.position, Range, LayerMask.GetMask("Enemy"));
 

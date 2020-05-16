@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Xml.Schema;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -17,6 +18,17 @@ public class Health : MonoBehaviour
     public UnityEvent OnTakeDamage;
     public UnityEvent OnDie;
     public UnityEvent OnDelete;
+    public bool isDead
+    {
+        get
+        {
+            return HP <= 0; 
+        }
+        private set
+        {
+            return;
+        }
+    }
 
     public int MaxHP
     {
@@ -54,6 +66,7 @@ public class Health : MonoBehaviour
             ShowFloatingText(damage, type);
             if(newHP <= 0)
             {
+                HP = 0;
                 Die();
             }
             else
@@ -95,7 +108,7 @@ public class Health : MonoBehaviour
     void Die()
     {
         OnDie.Invoke();
-        Destroy(gameObject);
+        //Destroy(gameObject);
     }
 
 }

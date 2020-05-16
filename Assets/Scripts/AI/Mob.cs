@@ -60,9 +60,16 @@ namespace TD.AI
         /// </summary>
         public void Die()
         {
-            OnDie.Invoke(TimeValue);
+            GetComponent<Animator>().SetTrigger("Death");
+            //GetComponent<Collider>().enabled = false;
+            gameObject.layer = 0;
         }
         
+        public void Dead()
+        {
+            OnDie.Invoke(TimeValue);
+            Destroy(gameObject);
+        }
         /// <summary>
         /// Called by this object when it has been identified for deletion (i.e. when it exits without dying)
         /// </summary>
