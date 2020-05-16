@@ -18,6 +18,19 @@ public class Health : MonoBehaviour
     public UnityEvent OnDie;
     public UnityEvent OnDelete;
 
+
+    public bool isDead
+    {
+        get
+        {
+            return HP <= 0;
+        }
+        private set
+        {
+            return;
+        }
+    }
+
     public int MaxHP
     {
         get
@@ -54,6 +67,7 @@ public class Health : MonoBehaviour
             ShowFloatingText(damage, type);
             if(newHP <= 0)
             {
+                HP = 0;
                 Die();
             }
             else
@@ -95,7 +109,7 @@ public class Health : MonoBehaviour
     void Die()
     {
         OnDie.Invoke();
-        Destroy(gameObject);
+        //Destroy(gameObject);
     }
 
 }

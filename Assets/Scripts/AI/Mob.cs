@@ -61,6 +61,17 @@ namespace TD.AI
         public void Die()
         {
             OnDie.Invoke(TimeValue);
+            Animator anim = GetComponent<Animator>();
+            if(anim != null)
+            {
+                anim.SetTrigger("Death");
+            }
+            
+        }
+
+        public void Dead()
+        {
+            Destroy(gameObject);
         }
         
         /// <summary>
