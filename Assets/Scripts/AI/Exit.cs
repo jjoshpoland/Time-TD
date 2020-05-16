@@ -10,10 +10,14 @@ public class Exit : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Mob escaped");
         Mob mob = other.gameObject.GetComponent<Mob>();
         if (mob != null)
         {
+            Health mobHealth = mob.gameObject.GetComponent<Health>();
+            if(mobHealth != null && mobHealth.isDead)
+            {
+                return;
+            }
             OnMobEnter.Invoke();
             mob.Delete();
         }

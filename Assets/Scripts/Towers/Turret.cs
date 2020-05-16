@@ -144,11 +144,10 @@ namespace TD.Towers
                 target = null;
                 OnTargetLost.Invoke();
             }
-
-            if (target != null && target.GetComponent<Health>().isDead)
+            if(target != null && target.GetComponent<Health>().isDead)
             {
                 target = null;
-                print("Target is Dead");
+
                 OnTargetLost.Invoke();
             }
             //then check if there is still a target
@@ -168,6 +167,11 @@ namespace TD.Towers
             for (int i = 0; i < hits.Length; i++)
             {
                 float distance = Vector3.Distance(transform.position, hits[i].transform.position);
+                Health targetHealth = hits[i].gameObject.GetComponent<Health>();
+                if (targetHealth != null && targetHealth.isDead)
+                {
+                    continue;
+                }
                 if (closestEnemy == null) //could reverse this to optimize if needed
                 {
                     closestEnemy = hits[i].gameObject;

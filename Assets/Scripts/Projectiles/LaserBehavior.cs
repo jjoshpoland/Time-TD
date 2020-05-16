@@ -37,6 +37,10 @@ namespace TD.Projectiles
             Health targetHealth = target.GetComponent<Health>();
             if (targetHealth != null)
             {
+                if(targetHealth.isDead)
+                {
+                    return;
+                }
                 //if the target wasnt immune, call the projectile on hit event, else call the on blocked event
                 if (targetHealth.TakeDamage(damage, type))
                 {

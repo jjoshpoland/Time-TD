@@ -30,6 +30,19 @@ public class Health : MonoBehaviour
         }
     }
 
+
+    public bool isDead
+    {
+        get
+        {
+            return HP <= 0;
+        }
+        private set
+        {
+            return;
+        }
+    }
+
     public int MaxHP
     {
         get
