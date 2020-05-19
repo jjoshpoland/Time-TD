@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using UnityEngine;
 
 namespace TD.Managers
@@ -16,6 +17,8 @@ namespace TD.Managers
         float timeBetweenWaves;
         [SerializeField]
         float timeBetweenSpawns;
+
+        public WaveList waveList;
 
         Wave currentWave;
         float lastWaveTime;
@@ -38,6 +41,23 @@ namespace TD.Managers
             isStarted = true;
         }
 
+        public Wave[] GetWaves()
+        {
+            if(waves.Count <= 0)
+            {
+                return null;
+            }
+
+            Wave[] waveList = new Wave[waves.Count];
+
+            for (int i = 0; i < waves.Count; i++)
+            {
+                waveList[i] = waves[i];
+            }
+
+            return waveList;
+        }
+
         private void Update()
         {
             if(isStarted)
@@ -48,6 +68,7 @@ namespace TD.Managers
                     //If the time has passed the alloted time since the last wave, then queue up the spawns for the next wave
                     if(Time.time > lastWaveTime + timeBetweenWaves)
                     {
+                        waveList.ClearWave(lastWave);
                         if(lastWave + 1 < waves.Count)
                         {
                             currentWave = waves[lastWave + 1];

@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7d9371cedd28daf4a899e7b0ceac2aea, type: 3}
-  m_Name: Rocket
+  m_Name: ExplosiveBullet
   m_EditorClassIdentifier: 
   speed: 12
   type: 2
   damage: 1
-  explosionRadius: 4
+  explosionRadius: 0.5
   ExplosionEffect: {fileID: 2394016270065724041, guid: c6ca8957dbc555a4d970804e1b4d0064,
     type: 3}

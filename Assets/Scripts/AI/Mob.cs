@@ -62,10 +62,12 @@ namespace TD.AI
         {
             OnDie.Invoke(TimeValue);
             Animator anim = GetComponent<Animator>();
-            if(anim != null)
-            {
-                anim.SetTrigger("Death");
-            }
+            //if(anim != null)
+            //{
+            //    anim.SetTrigger("Death");
+            //}
+            //temporary:
+            Dead();
             
         }
 

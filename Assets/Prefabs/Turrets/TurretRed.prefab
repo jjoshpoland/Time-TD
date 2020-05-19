@@ -24,6 +24,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6007950175993256931, guid: 23bd2b0a47018bd43972fa77685a806a,
         type: 3}
+    - target: {fileID: -8085000837804018385, guid: 34f0bcc6a455ecb4893030b07962691f,
+        type: 3}
+      propertyPath: ProjectilePrefab
+      value: 
+      objectReference: {fileID: 3230862415639779360, guid: 60b94b50de515f845957aaf7c519dd4f,
+        type: 3}
     - target: {fileID: 383765718969290649, guid: 34f0bcc6a455ecb4893030b07962691f,
         type: 3}
       propertyPath: m_Name
