@@ -64,6 +64,7 @@ namespace TD.Debuffs
 
         void Expire(Debuff expiredDebuff)
         {
+            expiredDebuff.Revert(this);
             debuffs.Remove(expiredDebuff);
             startTimes.Remove(expiredDebuff);
         }
