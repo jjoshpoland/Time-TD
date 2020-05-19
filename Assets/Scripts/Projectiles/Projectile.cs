@@ -51,7 +51,7 @@ namespace TD.Projectiles
             if(behavior != null)
             {
 
-                behavior.Move(this, Scale, target);
+                behavior.Move(this, target);
             }
             else
             {

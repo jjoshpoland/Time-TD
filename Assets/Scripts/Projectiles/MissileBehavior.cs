@@ -40,7 +40,7 @@ namespace TD.Projectiles
             
         }
 
-        public override void Move(Projectile projectile, float scale, GameObject target)
+        public override void Move(Projectile projectile, GameObject target)
         {
             if(target != null)
             {
@@ -55,9 +55,10 @@ namespace TD.Projectiles
                 //Set the local rotation to the interpolated rotation
                 projectile.transform.localRotation = rotation;
             }
-            
 
-            projectile.transform.position += (projectile.transform.forward * (speed * scale)) * Time.deltaTime;
+
+            //projectile.transform.position += (projectile.transform.forward * (speed * scale)) * Time.deltaTime;
+            projectile.transform.position += (projectile.transform.forward * (speed)) * Time.deltaTime;
         }
     }
 

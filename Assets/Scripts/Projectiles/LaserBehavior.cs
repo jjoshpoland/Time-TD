@@ -20,7 +20,7 @@ namespace TD.Projectiles
             
         }
 
-        public override void Move(Projectile projectile, float scale, GameObject target)
+        public override void Move(Projectile projectile, GameObject target)
         {
 
             if(target == null)
