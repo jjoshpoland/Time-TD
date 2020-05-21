@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7295576748264449532}
   - component: {fileID: 6129050281240307181}
   m_Layer: 9
-  m_Name: TokenKineticImmune
+  m_Name: KineticImmune
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -64,11 +64,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73b102b83cad66e4682b3cb5228e2ef3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 15
+  HP: 10
   immunities: 00000000
   floatingTextPrefab: {fileID: 2957037170606973458, guid: 07ae08db9fbec43429a5379c4f4ed0e6,
     type: 3}
-  randomTextIntensity: {x: 0, y: 0, z: 0}
+  randomTextIntensity: {x: 1, y: 0, z: 0}
   OnTakeDamage:
     m_PersistentCalls:
       m_Calls: []

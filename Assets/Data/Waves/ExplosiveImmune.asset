@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 732476a3483e1b24eb356574dcfc9296, type: 3}
-  m_Name: TestWave
+  m_Name: ExplosiveImmune
   m_EditorClassIdentifier: 
   Mobs:
-  - Mob: {fileID: 7537696918472478661, guid: 3166a8d53a971a040978b66ade80d259, type: 3}
+  - Mob: {fileID: 3724820860475799637, guid: ee421089a1099d44583393108f9f0c97, type: 3}
     Quantity: 50

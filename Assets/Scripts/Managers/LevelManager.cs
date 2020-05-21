@@ -74,13 +74,16 @@ namespace TD.Managers
                             currentWave = waves[lastWave + 1];
                             if (currentWave.Mobs.Count > 0)
                             {
+                                int newTimeBetweenWaves = 0;
                                 for (int i = 0; i < currentWave.Mobs.Count; i++)
                                 {
                                     for (int j = 0; j < currentWave.Mobs[i].Quantity; j++)
                                     {
                                         spawnQueue.Enqueue(currentWave.Mobs[i].Mob);
+                                        newTimeBetweenWaves++;
                                     }
                                 }
+                                timeBetweenWaves = newTimeBetweenWaves;
                                 lastWaveTime = Time.time;
                                 lastWave++;
                             }
@@ -98,18 +101,20 @@ namespace TD.Managers
                         
                     }
 
-                    //If the time has passed the alloted time since the last spawn, spawn the next mob in the queue
-                    if(spawnQueue.Any() && Time.time > lastSpawnTime + timeBetweenSpawns)
-                    {
-                        entry.Spawn(spawnQueue.Dequeue());
-                        lastSpawnTime = Time.time;
-                    }
+                    
                 }
                 else
                 {
                     Debug.LogWarning("No waves assigned to this level, no spawning will occur");
                     isStarted = false;
                 }
+            }
+
+            //If the time has passed the alloted time since the last spawn, spawn the next mob in the queue
+            if (spawnQueue.Any() && Time.time > lastSpawnTime + timeBetweenSpawns)
+            {
+                entry.Spawn(spawnQueue.Dequeue());
+                lastSpawnTime = Time.time;
             }
         }
     }
