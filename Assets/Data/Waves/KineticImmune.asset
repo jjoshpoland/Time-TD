@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Mobs:
   - Mob: {fileID: 3517488516326552497, guid: a2fc440a76419e3499f7c1fe191068a3, type: 3}
-    Quantity: 45
+    Quantity: 25

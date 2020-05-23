@@ -9,6 +9,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8085000837804018385, guid: 34f0bcc6a455ecb4893030b07962691f,
         type: 3}
+      propertyPath: OnShoot.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8085000837804018385, guid: 34f0bcc6a455ecb4893030b07962691f,
+        type: 3}
       propertyPath: muzzle
       value: 
       objectReference: {fileID: 6485078645431708738}

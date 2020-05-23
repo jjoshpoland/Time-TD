@@ -133,6 +133,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8085000837804018385, guid: 34f0bcc6a455ecb4893030b07962691f,
         type: 3}
+      propertyPath: OnShoot.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8085000837804018385, guid: 34f0bcc6a455ecb4893030b07962691f,
+        type: 3}
       propertyPath: OnTargetAcquired.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
       objectReference: {fileID: 0}
@@ -293,6 +298,21 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 4fb92c3ed66267848922a4206e4a4bd8, type: 2}
+    - target: {fileID: 5488413430873474922, guid: 34f0bcc6a455ecb4893030b07962691f,
+        type: 3}
+      propertyPath: DopplerLevel
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5488413430873474922, guid: 34f0bcc6a455ecb4893030b07962691f,
+        type: 3}
+      propertyPath: spreadCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5488413430873474922, guid: 34f0bcc6a455ecb4893030b07962691f,
+        type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34f0bcc6a455ecb4893030b07962691f, type: 3}
 --- !u!1 &8768017903936944599 stripped

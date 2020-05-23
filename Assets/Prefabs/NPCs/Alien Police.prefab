@@ -75,7 +75,7 @@ PrefabInstance:
     - target: {fileID: 1124675984529347503, guid: 3166a8d53a971a040978b66ade80d259,
         type: 3}
       propertyPath: HP
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 2344270154118931747, guid: 3166a8d53a971a040978b66ade80d259,
         type: 3}
@@ -145,7 +145,7 @@ PrefabInstance:
     - target: {fileID: 3126798757070969547, guid: 3166a8d53a971a040978b66ade80d259,
         type: 3}
       propertyPath: TimeValue
-      value: 1.5
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 3233032770516165669, guid: 3166a8d53a971a040978b66ade80d259,
         type: 3}

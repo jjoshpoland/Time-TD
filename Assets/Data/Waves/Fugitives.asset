@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 732476a3483e1b24eb356574dcfc9296, type: 3}
-  m_Name: ThermalImmune
+  m_Name: Fugitives
   m_EditorClassIdentifier: 
   Mobs:
-  - Mob: {fileID: 4009605159139578430, guid: 559fac3a6a9902440b0747445781e650, type: 3}
+  - Mob: {fileID: 1626780138530996610, guid: afbe7206ff107e44f99d741d1ec56239, type: 3}
     Quantity: 25

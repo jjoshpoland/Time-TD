@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TD.AI;
 using TD.Managers;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,6 +12,10 @@ public class WaveList : MonoBehaviour
     public RectTransform mobTextPrefab;
 
     RectTransform[] waveInfos;
+
+    public Image YellowShield;
+    public Image RedShield;
+    public Image GreyShield;
 
     private void Start()
     {
@@ -32,7 +37,7 @@ public class WaveList : MonoBehaviour
 
         WaveInfo.anchoredPosition = new Vector2(0, (height) * (order + .5f));
 
-        WaveInfo.GetComponentInChildren<Text>().text = waves[order].name;
+        WaveInfo.GetComponentInChildren<Text>().text = "Wave " + (order + 1).ToString();
 
         waveInfos[order] = WaveInfo;
 
@@ -47,8 +52,38 @@ public class WaveList : MonoBehaviour
 
             //get text component, assign string value
 
+            Text targetText = mobText.GetComponent<Text>();
+            targetText.text = mobs[i].Quantity + "x " + mobs[i].Mob.name;
 
-            mobText.GetComponent<Text>().text = mobs[i].Quantity + "x " + mobs[i].Mob.name;
+            DamageType[] immunities = mobs[i].Mob.GetComponent<Health>().immunities;
+
+            if(immunities.Length > 0)
+            {
+                for (int immunity = 0; immunity < immunities.Length; immunity++)
+                {
+                    Image icon = null;
+                    if(immunities[immunity] == DamageType.Explosive)
+                    {
+                        icon = Instantiate(YellowShield, mobText.transform);
+                        
+                    }
+                    else if(immunities[immunity] == DamageType.Kinetic)
+                    {
+                        icon = Instantiate(GreyShield, mobText.transform);
+                    }
+                    else if(immunities[immunity] == DamageType.Thermal)
+                    {
+                        icon = Instantiate(RedShield, mobText.transform);
+                    }
+
+                    if(icon != null)
+                    {
+                        icon.rectTransform.anchoredPosition = new Vector3((-icon.rectTransform.rect.width * 4.25f) + (icon.rectTransform.rect.width * immunity), -icon.rectTransform.rect.height, 0);
+                    }
+                    
+                }
+            }
+            
         }
     }
 
