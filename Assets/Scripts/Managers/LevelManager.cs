@@ -19,12 +19,15 @@ namespace TD.Managers
         float timeBetweenSpawns;
 
         public WaveList waveList;
+        public bool infinite;
+        public bool AutoStart;
 
         Wave currentWave;
         float lastWaveTime;
         float lastSpawnTime;
         int lastWave;
         bool isStarted = false;
+
 
         Queue<GameObject> spawnQueue;
 
@@ -34,6 +37,13 @@ namespace TD.Managers
             lastWaveTime = Time.time - timeBetweenWaves;
             lastSpawnTime = Time.time;
             lastWave = -1;
+        }
+        private void Start()
+        {
+            if(AutoStart)
+            {
+                StartLevel();
+            }
         }
 
         public void StartLevel()
@@ -68,7 +78,11 @@ namespace TD.Managers
                     //If the time has passed the alloted time since the last wave, then queue up the spawns for the next wave
                     if(Time.time > lastWaveTime + timeBetweenWaves)
                     {
-                        waveList.ClearWave(lastWave);
+                        if(waveList != null )
+                        {
+                            waveList.ClearWave(lastWave);
+
+                        }
                         if(lastWave + 1 < waves.Count)
                         {
                             currentWave = waves[lastWave + 1];
@@ -94,8 +108,15 @@ namespace TD.Managers
                         }
                         else
                         {
+                            
                             isStarted = false;
                             Debug.Log("All waves have spawned");
+
+                            if(infinite)
+                            {
+                                lastWave = -1;
+                                isStarted = true;
+                            }
                         }
                         
                         

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &2278326748570491635
+--- !u!1001 &6677932561087753932
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -9,69 +9,55 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8085000837804018385, guid: 34f0bcc6a455ecb4893030b07962691f,
         type: 3}
+      propertyPath: OnShoot.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8085000837804018385, guid: 34f0bcc6a455ecb4893030b07962691f,
+        type: 3}
       propertyPath: upgradePaths.Array.size
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8085000837804018385, guid: 34f0bcc6a455ecb4893030b07962691f,
         type: 3}
+      propertyPath: muzzle
+      value: 
+      objectReference: {fileID: 6485078645431708738}
+    - target: {fileID: -8085000837804018385, guid: 34f0bcc6a455ecb4893030b07962691f,
+        type: 3}
       propertyPath: ProjectilePrefab
       value: 
-      objectReference: {fileID: 7123375671217037924, guid: 2950ea09daf813842a1dd032d8a1dfd8,
+      objectReference: {fileID: 1472508411515947652, guid: b9223447c02258341b6c57f19e369587,
         type: 3}
     - target: {fileID: -8085000837804018385, guid: 34f0bcc6a455ecb4893030b07962691f,
         type: 3}
       propertyPath: fireRate
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8085000837804018385, guid: 34f0bcc6a455ecb4893030b07962691f,
         type: 3}
       propertyPath: Cost
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 383765717564527863, guid: 34f0bcc6a455ecb4893030b07962691f,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 383765718779019917, guid: 34f0bcc6a455ecb4893030b07962691f,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.206
-      objectReference: {fileID: 0}
-    - target: {fileID: 383765718779019917, guid: 34f0bcc6a455ecb4893030b07962691f,
+    - target: {fileID: 383765717564527857, guid: 34f0bcc6a455ecb4893030b07962691f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 383765718779019917, guid: 34f0bcc6a455ecb4893030b07962691f,
+    - target: {fileID: 383765717564527857, guid: 34f0bcc6a455ecb4893030b07962691f,
         type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
+      propertyPath: m_LocalPosition.y
+      value: 0.075
       objectReference: {fileID: 0}
-    - target: {fileID: 383765718779019917, guid: 34f0bcc6a455ecb4893030b07962691f,
+    - target: {fileID: 383765717564527862, guid: 34f0bcc6a455ecb4893030b07962691f,
         type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 383765718779019917, guid: 34f0bcc6a455ecb4893030b07962691f,
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 0f6663561f85e124f8d590d9c6707ba8,
         type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 383765718779019917, guid: 34f0bcc6a455ecb4893030b07962691f,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 383765718779019917, guid: 34f0bcc6a455ecb4893030b07962691f,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
-      objectReference: {fileID: 0}
     - target: {fileID: 383765718969290649, guid: 34f0bcc6a455ecb4893030b07962691f,
         type: 3}
       propertyPath: m_Name
-      value: SlowFieldTurret
+      value: MissileTurret
       objectReference: {fileID: 0}
     - target: {fileID: 383765718969290653, guid: 34f0bcc6a455ecb4893030b07962691f,
         type: 3}
@@ -128,5 +114,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 383765718969290655, guid: 34f0bcc6a455ecb4893030b07962691f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8d95946307324134faacec54df925821, type: 2}
+    - target: {fileID: 5488413430873474922, guid: 34f0bcc6a455ecb4893030b07962691f,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34f0bcc6a455ecb4893030b07962691f, type: 3}
+--- !u!1 &6485078645431708738 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 383765718779019918, guid: 34f0bcc6a455ecb4893030b07962691f,
+    type: 3}
+  m_PrefabInstance: {fileID: 6677932561087753932}
+  m_PrefabAsset: {fileID: 0}

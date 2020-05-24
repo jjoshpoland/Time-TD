@@ -56,8 +56,13 @@ namespace TD.Managers
                 }
             }
             
-            Clock.text = TimeSpan.FromSeconds(remainingTime).ToString("mm':'ss':'ff");
-            Clock.color = Color.Lerp(Clock.color, Color.white, .01f);
+            if(Clock != null)
+            {
+                Clock.text = TimeSpan.FromSeconds(remainingTime).ToString("mm':'ss':'ff");
+                Clock.color = Color.Lerp(Clock.color, Color.white, .01f);
+            }
+
+            
         }
 
         public void StartClock()
@@ -72,7 +77,11 @@ namespace TD.Managers
         public void AddTime(float time)
         {
             remainingTime += Mathf.Abs(time);
-            Clock.color = Color.green;
+            if (Clock != null)
+            {
+
+                Clock.color = Color.green;
+            }
         }
 
         /// <summary>
@@ -82,7 +91,11 @@ namespace TD.Managers
         public void RemoveTime(float time)
         {
             remainingTime -= Mathf.Abs(time);
-            Clock.color = Color.red;
+            if (Clock != null)
+            {
+
+                Clock.color = Color.red;
+            }
         }
 
         public void SetScale(float scale)

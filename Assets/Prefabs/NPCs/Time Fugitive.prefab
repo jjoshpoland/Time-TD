@@ -51,8 +51,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c54053bfd7a2ea439b876d5433bcd6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeValue: 0.5
-  speed: 7
+  TimeValue: 0.75
+  speed: 10
   OnDie:
     m_PersistentCalls:
       m_Calls: []
@@ -71,7 +71,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73b102b83cad66e4682b3cb5228e2ef3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 8
+  HP: 10
   immunities: 
   floatingTextPrefab: {fileID: 2957037170606973458, guid: 07ae08db9fbec43429a5379c4f4ed0e6,
     type: 3}

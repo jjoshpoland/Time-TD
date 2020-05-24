@@ -29992,6 +29992,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelManager
       objectReference: {fileID: 0}
+    - target: {fileID: 8065934409000612552, guid: 135e99c1e4aabd747a2fa89e167a1f3f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.02142334
+      objectReference: {fileID: 0}
     - target: {fileID: 8454581266056933316, guid: 135e99c1e4aabd747a2fa89e167a1f3f,
         type: 3}
       propertyPath: m_Enabled

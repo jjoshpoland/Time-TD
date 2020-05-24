@@ -10,12 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 534739438673462737}
   - component: {fileID: 4300007167684069890}
-  m_Layer: 0
+  - component: {fileID: 2429423206179030273}
+  m_Layer: 12
   m_Name: 3StoryHighrise
   m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &534739438673462737
 Transform:
@@ -70,6 +71,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetMap: {fileID: 0}
+--- !u!65 &2429423206179030273
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534739438673172977}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3, y: 3, z: 3}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &534739438673172979
 GameObject:
   m_ObjectHideFlags: 0
@@ -81,12 +95,12 @@ GameObject:
   - component: {fileID: 534739438673462739}
   - component: {fileID: 534739438676362739}
   - component: {fileID: 534739438675363635}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Mesh1_Group1_Model
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
-  m_StaticEditorFlags: 8
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &534739438673462739
 Transform:
@@ -156,9 +170,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 534739438673462737}
     m_Modifications:
+    - target: {fileID: 100000, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
       propertyPath: m_Name
       value: modularBuildings_035 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -219,9 +253,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 534739438673462737}
     m_Modifications:
+    - target: {fileID: 100000, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
       propertyPath: m_Name
       value: modularBuildings_035 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -282,9 +336,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 534739438673462737}
     m_Modifications:
+    - target: {fileID: 100000, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
       propertyPath: m_Name
       value: modularBuildings_035 (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -345,9 +419,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 534739438673462737}
     m_Modifications:
+    - target: {fileID: 100000, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
       propertyPath: m_Name
       value: modularBuildings_035 (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -408,9 +502,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 534739438673462737}
     m_Modifications:
+    - target: {fileID: 100000, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
       propertyPath: m_Name
       value: modularBuildings_035 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -471,9 +585,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 534739438673462737}
     m_Modifications:
+    - target: {fileID: 100000, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
       propertyPath: m_Name
       value: modularBuildings_035 (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -534,9 +668,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 534739438673462737}
     m_Modifications:
+    - target: {fileID: 100000, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
       propertyPath: m_Name
       value: modularBuildings_035 (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -597,9 +751,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 534739438673462737}
     m_Modifications:
+    - target: {fileID: 100000, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
       propertyPath: m_Name
       value: modularBuildings_035 (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -660,9 +834,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 534739438673462737}
     m_Modifications:
+    - target: {fileID: 100000, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
       propertyPath: m_Name
       value: modularBuildings_035 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -723,9 +917,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 534739438673462737}
     m_Modifications:
+    - target: {fileID: 100000, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
       propertyPath: m_Name
       value: modularBuildings_035 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -786,9 +1000,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 534739438673462737}
     m_Modifications:
+    - target: {fileID: 100000, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
       propertyPath: m_Name
       value: modularBuildings_035 (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -849,9 +1083,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 534739438673462737}
     m_Modifications:
+    - target: {fileID: 100000, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
       propertyPath: m_Name
       value: modularBuildings_035 (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -912,9 +1166,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 534739438673462737}
     m_Modifications:
+    - target: {fileID: 100000, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
       propertyPath: m_Name
       value: modularBuildings_035
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -975,9 +1249,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 534739438673462737}
     m_Modifications:
+    - target: {fileID: 100000, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
       propertyPath: m_Name
       value: modularBuildings_035 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1038,9 +1332,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 534739438673462737}
     m_Modifications:
+    - target: {fileID: 100000, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
       propertyPath: m_Name
       value: modularBuildings_035 (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1101,9 +1415,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 534739438673462737}
     m_Modifications:
+    - target: {fileID: 100000, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
       propertyPath: m_Name
       value: modularBuildings_035 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1164,9 +1498,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 534739438673462737}
     m_Modifications:
+    - target: {fileID: 100000, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
       propertyPath: m_Name
       value: modularBuildings_035 (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1227,9 +1581,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 534739438673462737}
     m_Modifications:
+    - target: {fileID: 100000, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
       propertyPath: m_Name
       value: modularBuildings_035 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1290,9 +1664,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 534739438673462737}
     m_Modifications:
+    - target: {fileID: 100000, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
       propertyPath: m_Name
       value: modularBuildings_035 (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1353,9 +1747,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 534739438673462737}
     m_Modifications:
+    - target: {fileID: 100000, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
       propertyPath: m_Name
       value: modularBuildings_035 (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1416,9 +1830,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 534739438673462737}
     m_Modifications:
+    - target: {fileID: 100000, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
       propertyPath: m_Name
       value: modularBuildings_035 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1479,9 +1913,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 534739438673462737}
     m_Modifications:
+    - target: {fileID: 100000, guid: fabb27bae66b9f2448606fe964ec01c2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fabb27bae66b9f2448606fe964ec01c2, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: fabb27bae66b9f2448606fe964ec01c2, type: 3}
       propertyPath: m_Name
       value: modularBuildings_018
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: fabb27bae66b9f2448606fe964ec01c2, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: fabb27bae66b9f2448606fe964ec01c2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: fabb27bae66b9f2448606fe964ec01c2, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: fabb27bae66b9f2448606fe964ec01c2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1542,9 +1996,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 534739438673462737}
     m_Modifications:
+    - target: {fileID: 100000, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
       propertyPath: m_Name
       value: modularBuildings_035 (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1605,9 +2079,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 534739438673462737}
     m_Modifications:
+    - target: {fileID: 100000, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
       propertyPath: m_Name
       value: modularBuildings_035 (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1668,9 +2162,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 534739438673462737}
     m_Modifications:
+    - target: {fileID: 100000, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
       propertyPath: m_Name
       value: modularBuildings_035 (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 02c0afe3e5c66cc4cbf1ce7f0c538f7e, type: 3}
       propertyPath: m_LocalPosition.x
