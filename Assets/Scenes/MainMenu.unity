@@ -4813,6 +4813,8 @@ MonoBehaviour:
   TowerMenuPrefab: {fileID: 2867608914733125145, guid: 878835264b6f1d240a702287a0ee8b4d,
     type: 3}
   mainCanvas: {fileID: 139854907}
+  PauseMenu: {fileID: 0}
+  exitButton: {fileID: 0}
 --- !u!1 &327583070
 GameObject:
   m_ObjectHideFlags: 0

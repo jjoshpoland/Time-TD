@@ -8318,6 +8318,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2242809579280011127, guid: e0721531ebaece343a86fc11d1810696,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0721531ebaece343a86fc11d1810696, type: 3}
 --- !u!224 &704226692 stripped
@@ -25904,6 +25909,24 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1330541370330442808, guid: 135e99c1e4aabd747a2fa89e167a1f3f,
+        type: 3}
+      propertyPath: YellowShield
+      value: 
+      objectReference: {fileID: 1464950674625408014, guid: a2aff617d3ebb834c84d1cbfc3c4ea27,
+        type: 3}
+    - target: {fileID: 1330541370330442808, guid: 135e99c1e4aabd747a2fa89e167a1f3f,
+        type: 3}
+      propertyPath: RedShield
+      value: 
+      objectReference: {fileID: 5912409099525858885, guid: 0558955eaa851f84c85caf1ac653f670,
+        type: 3}
+    - target: {fileID: 1330541370330442808, guid: 135e99c1e4aabd747a2fa89e167a1f3f,
+        type: 3}
+      propertyPath: GreyShield
+      value: 
+      objectReference: {fileID: 5643500686922592128, guid: 99f0c4921160a12408d90f2bc316d106,
+        type: 3}
     - target: {fileID: 1452886718252894190, guid: 135e99c1e4aabd747a2fa89e167a1f3f,
         type: 3}
       propertyPath: m_Text

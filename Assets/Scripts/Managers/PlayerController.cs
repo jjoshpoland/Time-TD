@@ -14,6 +14,8 @@ namespace TD.Managers
         TowerMenu TowerMenuPrefab;
         [SerializeField]
         Canvas mainCanvas;
+        [SerializeField]
+        GameObject PauseMenu;
         Map mainMap;
         Cell currentCell;
         TowerSpot currentSpot;
@@ -21,6 +23,8 @@ namespace TD.Managers
         Tower currentTower;
 
         TowerMenu currentMenu;
+
+        bool isPaused;
 
         private void Awake()
         {
@@ -50,6 +54,32 @@ namespace TD.Managers
             }
 
             attachedTower = Instantiate(tower, null);
+        }
+
+        public void ResumeGame()
+        {
+            
+            Time.timeScale = 1;
+            PauseMenu.SetActive(false);
+            isPaused = false;
+        }
+
+        public void PauseGame()
+        {
+            
+            Time.timeScale = 0;
+            isPaused = true;
+        }
+
+        public void ActivateMenu()
+        {
+            PauseGame();
+            PauseMenu.SetActive(true);
+        }
+
+        public void Exit()
+        {
+            GameManager.instance.ExitToMenu();
         }
 
         /// <summary>
@@ -121,6 +151,36 @@ namespace TD.Managers
         /// </summary>
         void HandleInput()
         {
+            //pause game on space
+            if(Input.GetKeyDown(KeyCode.Space))
+            {
+                
+                if(isPaused)
+                {
+                    ResumeGame();
+                }
+                else
+                {
+                    PauseGame();
+                }
+            }
+
+            //bring up pause menu on escape
+            if(Input.GetKey(KeyCode.Escape))
+            {
+                ActivateMenu();
+                if (attachedTower != null)
+                {
+                    Destroy(attachedTower.gameObject);
+                }
+            }
+
+            //dont allow other inputs if pause menu is up
+            if(PauseMenu != null && PauseMenu.activeSelf)
+            {
+                return;
+            }
+
             //Check for the current cell and force the currently attached tower to that cell
             Ray inputRay = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
@@ -159,6 +219,7 @@ namespace TD.Managers
                 
             }
 
+            //right click cancels tower placement
             if(Input.GetMouseButton(1))
             {
                 if(attachedTower != null)
