@@ -477,8 +477,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -77.1, y: -166.5}
-  m_SizeDelta: {x: 153.14185, y: 332.8999}
+  m_AnchoredPosition: {x: -77.1, y: -188.5}
+  m_SizeDelta: {x: 153.14185, y: 376.8805}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5556466997503076534
 CanvasRenderer:
@@ -524,24 +524,24 @@ MonoBehaviour:
 
 
     Each
-    tower costs time to build.
+    tower costs time to build. Towers must be placed on empty concrete tiles.
 
 
     Controls:
 
-    - Select turret below to build
-    (time cost in parenthesis)
+    -
+    Select turret below to build (time cost in parenthesis)
 
-    - Right-click to cancel build
+    - Right-click to
+    cancel build
 
-    - "Space"
-    to pause
+    - "Space" to pause
 
     - "Esc" to see menu
 
 
-    - "Constrain Time" to spend some time
-    to slow down all active units'
+    - "Constrain
+    Time" to spend some time to slow down all active units'
 --- !u!1 &3250044357744746710
 GameObject:
   m_ObjectHideFlags: 0
