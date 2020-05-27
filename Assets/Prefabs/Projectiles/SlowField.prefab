@@ -24,6 +24,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4511209917970927278, guid: cc9c070b94dcf73408636a59e7bd3509,
         type: 3}
+      propertyPath: OnHit.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4511209917970927278, guid: cc9c070b94dcf73408636a59e7bd3509,
+        type: 3}
       propertyPath: behavior
       value: 
       objectReference: {fileID: 11400000, guid: d1ecd54a3539edb45838762186211a41,

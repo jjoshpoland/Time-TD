@@ -14,10 +14,51 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4511209917970927278, guid: cc9c070b94dcf73408636a59e7bd3509,
         type: 3}
+      propertyPath: OnBlocked.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4511209917970927278, guid: cc9c070b94dcf73408636a59e7bd3509,
+        type: 3}
+      propertyPath: OnHit.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4511209917970927278, guid: cc9c070b94dcf73408636a59e7bd3509,
+        type: 3}
       propertyPath: behavior
       value: 
       objectReference: {fileID: 11400000, guid: a78f894724f47bf4ea9390feeeb4d41b,
         type: 2}
+    - target: {fileID: 4511209917970927278, guid: cc9c070b94dcf73408636a59e7bd3509,
+        type: 3}
+      propertyPath: OnBlocked.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 7168705985024274139, guid: 7cc1636a8fa003c46a12a996d22baebc,
+        type: 3}
+    - target: {fileID: 4511209917970927278, guid: cc9c070b94dcf73408636a59e7bd3509,
+        type: 3}
+      propertyPath: OnBlocked.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4511209917970927278, guid: cc9c070b94dcf73408636a59e7bd3509,
+        type: 3}
+      propertyPath: OnBlocked.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4511209917970927278, guid: cc9c070b94dcf73408636a59e7bd3509,
+        type: 3}
+      propertyPath: OnBlocked.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4511209917970927278, guid: cc9c070b94dcf73408636a59e7bd3509,
+        type: 3}
+      propertyPath: OnBlocked.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 4511209917970927278, guid: cc9c070b94dcf73408636a59e7bd3509,
+        type: 3}
+      propertyPath: OnBlocked.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5474435270896304476, guid: cc9c070b94dcf73408636a59e7bd3509,
         type: 3}
       propertyPath: m_LocalPosition.x

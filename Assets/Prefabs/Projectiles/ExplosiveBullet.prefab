@@ -19,10 +19,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4511209917970927278, guid: cc9c070b94dcf73408636a59e7bd3509,
         type: 3}
+      propertyPath: OnHit.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4511209917970927278, guid: cc9c070b94dcf73408636a59e7bd3509,
+        type: 3}
       propertyPath: behavior
       value: 
       objectReference: {fileID: 11400000, guid: 6c97bd84581684c4ba6ef3433082a8ee,
         type: 2}
+    - target: {fileID: 4511209917970927278, guid: cc9c070b94dcf73408636a59e7bd3509,
+        type: 3}
+      propertyPath: OnBlocked.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 2394016270065724041, guid: 9126f7f979d6bbc489c29d999f72348b,
+        type: 3}
     - target: {fileID: 5474435270896304476, guid: cc9c070b94dcf73408636a59e7bd3509,
         type: 3}
       propertyPath: m_LocalPosition.x

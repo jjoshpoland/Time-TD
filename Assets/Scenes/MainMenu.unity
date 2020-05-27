@@ -4814,7 +4814,6 @@ MonoBehaviour:
     type: 3}
   mainCanvas: {fileID: 139854907}
   PauseMenu: {fileID: 0}
-  exitButton: {fileID: 0}
 --- !u!1 &327583070
 GameObject:
   m_ObjectHideFlags: 0

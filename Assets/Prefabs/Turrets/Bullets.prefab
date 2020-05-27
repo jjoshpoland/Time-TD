@@ -171,7 +171,7 @@ GameObject:
   - component: {fileID: -8085000837804018385}
   - component: {fileID: 5488413430873474922}
   m_Layer: 0
-  m_Name: TurretBase
+  m_Name: Bullets
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -309,7 +309,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c2649445dec38d4488ecfd439f13faae, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 3d2a5c4708ee5e743b0747baa6fb5006, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
