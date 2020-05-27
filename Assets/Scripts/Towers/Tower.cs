@@ -16,6 +16,7 @@ namespace TD.Towers
 
         public UnityEvent OnUpgrade;
         public UnityEvent OnSell;
+        public UnityEvent OnBuild;
 
         public float Cost
         {
@@ -34,6 +35,7 @@ namespace TD.Towers
         {
             Turret = Instantiate(Turret, transform);
             name = Turret.name;
+            
         }
 
         // Update is called once per frame
@@ -57,6 +59,7 @@ namespace TD.Towers
 
         public void InitializeTurret(float scale)
         {
+            OnBuild.Invoke();
             Turret.scale = scale;
             Turret.Initialized = true;
         }

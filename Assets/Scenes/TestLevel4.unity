@@ -29671,6 +29671,11 @@ PrefabInstance:
       propertyPath: m_Text
       value: Laser Turret (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 3519779280892092493, guid: 135e99c1e4aabd747a2fa89e167a1f3f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3841673612124976549, guid: 135e99c1e4aabd747a2fa89e167a1f3f,
         type: 3}
       propertyPath: m_Text

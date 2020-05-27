@@ -166,13 +166,21 @@ namespace TD.Managers
             }
 
             //bring up pause menu on escape
-            if(Input.GetKey(KeyCode.Escape))
+            if(Input.GetKeyUp(KeyCode.Escape))
             {
-                ActivateMenu();
                 if (attachedTower != null)
                 {
                     Destroy(attachedTower.gameObject);
                 }
+                else if (PauseMenu.activeSelf)
+                {
+                    PauseMenu.SetActive(false);
+                }
+                else
+                {
+                    ActivateMenu();
+                }
+                
             }
 
             //dont allow other inputs if pause menu is up
