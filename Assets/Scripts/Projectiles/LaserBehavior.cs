@@ -8,7 +8,6 @@ namespace TD.Projectiles
     public class LaserBehavior : ProjectileBehavior
     {
         public int damage;
-        public DamageType type;
 
         public override void Hit(Projectile projectile, GameObject target)
         {

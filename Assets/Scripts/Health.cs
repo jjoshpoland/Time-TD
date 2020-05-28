@@ -116,5 +116,5 @@ public class Health : MonoBehaviour
 
 public enum DamageType
 {
-    Kinetic, Thermal, Explosive
+    Kinetic, Thermal, Explosive, Slow
 }

@@ -379,6 +379,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UpgradeButton1: {fileID: 7937995229771600096}
   UpgradeButton2: {fileID: 7403647573459111925}
+  TowerTitle: {fileID: 5198869327029106093}
   SellButton: {fileID: 2149444654785067885}
 --- !u!1 &5896276016957881654
 GameObject:

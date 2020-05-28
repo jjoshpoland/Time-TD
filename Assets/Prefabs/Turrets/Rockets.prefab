@@ -52,7 +52,7 @@ PrefabInstance:
     - target: {fileID: 383765718969290649, guid: 34f0bcc6a455ecb4893030b07962691f,
         type: 3}
       propertyPath: m_Name
-      value: RocketTurret
+      value: Rockets
       objectReference: {fileID: 0}
     - target: {fileID: 383765718969290653, guid: 34f0bcc6a455ecb4893030b07962691f,
         type: 3}

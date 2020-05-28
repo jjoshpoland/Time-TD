@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60422d25315c41b428664448dbcd30a1, type: 3}
   m_Name: SlowField
   m_EditorClassIdentifier: 
+  type: 3
   ProjectileSpeed: 0
   Radius: 4
   debuff: {fileID: 11400000, guid: da141a52fa865f1418546f5d65ba6eaf, type: 2}

@@ -25,6 +25,18 @@ namespace TD.Managers
         public float ConstraintDuration;
         float constraintTime;
 
+        public float RemainingTime
+        {
+            get
+            {
+                return remainingTime;
+            }
+            private set
+            {
+                remainingTime = value;
+            }
+        }
+
         private void Awake()
         {
             instance = this;

@@ -64,6 +64,41 @@ namespace TD.Towers
             }
         }
 
+        public DamageType Type
+        {
+            get
+            {
+                return ProjectilePrefab.Type;
+            }
+            private set
+            {
+                return;
+            }
+        }
+
+        public Color DamageColor
+        {
+            get
+            {
+                if(Type == DamageType.Explosive)
+                {
+                    return new Color(214f / 256f, 165f / 256f, 30 / 256f);
+                }
+                else if(Type == DamageType.Kinetic)
+                {
+                    return Color.white;
+                }
+                else if (Type == DamageType.Thermal)
+                {
+                    return Color.red;
+                }
+                else
+                {
+                    return Color.blue;
+                }
+            }
+        }
+
         // Start is called before the first frame update
         void Start()
         {

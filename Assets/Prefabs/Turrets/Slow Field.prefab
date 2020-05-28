@@ -539,6 +539,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 383765718969290655, guid: 34f0bcc6a455ecb4893030b07962691f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -7416217663357473095, guid: 1c998db69f8815843bb507fcc3624e4a,
+        type: 3}
     - target: {fileID: 5488413430873474922, guid: 34f0bcc6a455ecb4893030b07962691f,
         type: 3}
       propertyPath: rolloffCustomCurve.m_Curve.Array.size

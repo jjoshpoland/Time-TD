@@ -100,7 +100,7 @@ namespace TD.Managers
         {
             if(attachedTower != null && currentSpot != null)
             {
-                if(currentSpot.AddOccupant(attachedTower))
+                if(currentSpot.AddOccupant(attachedTower) && attachedTower.Cost <= ClockManager.instance.RemainingTime)
                 {
                     attachedTower.transform.position = currentCell.transform.position;
                     attachedTower.InitializeTurret(ClockManager.instance.TimeScale);
@@ -182,6 +182,10 @@ namespace TD.Managers
                 if (attachedTower != null)
                 {
                     Destroy(attachedTower.gameObject);
+                }
+                else if(currentMenu.gameObject.activeSelf)
+                {
+                    currentMenu.gameObject.SetActive(false);
                 }
                 else if (PauseMenu.activeSelf)
                 {

@@ -8,7 +8,6 @@ namespace TD.Projectiles
     public class RocketBehavior : ProjectileBehavior
     {
         public float speed;
-        public DamageType type;
         public int damage;
         public float explosionRadius;
         public GameObject ExplosionEffect;

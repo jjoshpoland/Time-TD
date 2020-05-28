@@ -31,6 +31,14 @@ namespace TD.Projectiles
             }
         }
 
+        public DamageType Type
+        {
+            get
+            {
+                return behavior.type;
+            }
+        }
+
         private void Start()
         {
             startTime = Time.time;

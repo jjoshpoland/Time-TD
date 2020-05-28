@@ -6,6 +6,8 @@ namespace TD.Projectiles
 {
     public abstract class ProjectileBehavior : ScriptableObject
     {
+
+        public DamageType type;
         /// <summary>
         /// Called every frame by the projectile
         /// </summary>

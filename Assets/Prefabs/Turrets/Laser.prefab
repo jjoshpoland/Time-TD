@@ -312,7 +312,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 4fb92c3ed66267848922a4206e4a4bd8, type: 2}
+      objectReference: {fileID: 2100000, guid: 805e9a46bbb34374ca80fd0cd10e34ae, type: 2}
     - target: {fileID: 5488413430873474922, guid: 34f0bcc6a455ecb4893030b07962691f,
         type: 3}
       propertyPath: DopplerLevel

@@ -10,6 +10,7 @@ public class TowerMenu : MonoBehaviour
 
     public Button UpgradeButton1;
     public Button UpgradeButton2;
+    public Text TowerTitle;
 
     public Button SellButton;
 
@@ -25,13 +26,17 @@ public class TowerMenu : MonoBehaviour
         this.Turret1 = tower.GetUpgradePath(0);
         this.Turret2 = tower.GetUpgradePath(1);
 
+        TowerTitle.text = tower.name;
+
         if(Turret2 == null)
         {
             Destroy(UpgradeButton2.gameObject);
         }
         else
         {
-            UpgradeButton2.GetComponentInChildren<Text>().text = Turret2.name + " (" + Turret2.Cost + ")";
+            Text towerText = UpgradeButton2.GetComponentInChildren<Text>();
+            towerText.text = Turret2.name + " (" + Turret2.Cost + ")";
+            towerText.color = Turret2.DamageColor;
         }
 
         if(Turret1 == null)

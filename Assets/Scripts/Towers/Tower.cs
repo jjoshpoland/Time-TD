@@ -30,11 +30,24 @@ namespace TD.Towers
             }
         }
 
+        public string TurretName
+        {
+            get
+            {
+                return Turret.name;
+            }
+            private set
+            {
+                return;
+            }
+        }
+
         // Start is called before the first frame update
         void Start()
         {
-            Turret = Instantiate(Turret, transform);
             name = Turret.name;
+            Turret = Instantiate(Turret, transform);
+            
             
         }
 
