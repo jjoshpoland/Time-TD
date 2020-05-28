@@ -183,7 +183,7 @@ namespace TD.Managers
                 {
                     Destroy(attachedTower.gameObject);
                 }
-                else if(currentMenu.gameObject.activeSelf)
+                else if(currentMenu != null && currentMenu.gameObject.activeSelf)
                 {
                     currentMenu.gameObject.SetActive(false);
                 }

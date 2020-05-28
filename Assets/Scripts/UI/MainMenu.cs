@@ -10,6 +10,8 @@ public class MainMenu : MonoBehaviour
     public GameObject TutorialMenuPanel;
 
     public GameObject LevelSelectPanel;
+
+    public GameObject CreditsPanel;
     
     // Start is called before the first frame update
     void Start()
@@ -28,6 +30,7 @@ public class MainMenu : MonoBehaviour
         MainMenuPanel.SetActive(true);
         TutorialMenuPanel.SetActive(false);
         LevelSelectPanel.SetActive(false);
+        CreditsPanel.SetActive(true);
     }
 
     public void LoadTutorialMenu()
@@ -35,6 +38,7 @@ public class MainMenu : MonoBehaviour
         MainMenuPanel.SetActive(false);
         TutorialMenuPanel.SetActive(true);
         LevelSelectPanel.SetActive(false);
+        CreditsPanel.SetActive(false);
     }
 
     public void LoadLevelSelectMenu()
@@ -42,5 +46,6 @@ public class MainMenu : MonoBehaviour
         MainMenuPanel.SetActive(false);
         TutorialMenuPanel.SetActive(false);
         LevelSelectPanel.SetActive(true);
+        CreditsPanel.SetActive(false);
     }
 }
