@@ -70,6 +70,11 @@ namespace TD.Managers
             isStopped = false;
         }
 
+        public void StopClock()
+        {
+            isStopped = true;
+        }
+
         /// <summary>
         /// Adds the given time from the clock. 
         /// </summary>

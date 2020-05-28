@@ -2679,6 +2679,9 @@ MonoBehaviour:
   waveList: {fileID: 1330541370330442808}
   infinite: 0
   AutoStart: 0
+  GameOverText: {fileID: 8244802585563245611}
+  RestartButton: {fileID: 8798255643307955106}
+  GameOverMenu: {fileID: 3118053726958632307}
 --- !u!1 &4738097309872984428
 GameObject:
   m_ObjectHideFlags: 0

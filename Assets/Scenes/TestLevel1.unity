@@ -29058,7 +29058,7 @@ PrefabInstance:
         type: 3}
       propertyPath: waves.Array.data[3]
       value: 
-      objectReference: {fileID: 11400000, guid: 695ed1203e6ba7a4aad1d3b7d4b64213,
+      objectReference: {fileID: 11400000, guid: cbbefdec70d228c40ba3890d408bc704,
         type: 2}
     - target: {fileID: 4738097309631010224, guid: 135e99c1e4aabd747a2fa89e167a1f3f,
         type: 3}
@@ -29143,6 +29143,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LevelManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 5304357572831992287, guid: 135e99c1e4aabd747a2fa89e167a1f3f,
+        type: 3}
+      propertyPath: StartingTime
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 8454581266056933316, guid: 135e99c1e4aabd747a2fa89e167a1f3f,
         type: 3}

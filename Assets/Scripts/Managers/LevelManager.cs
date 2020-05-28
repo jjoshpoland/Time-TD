@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
+using TD.AI;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace TD.Managers
 {
@@ -27,12 +29,19 @@ namespace TD.Managers
         float lastSpawnTime;
         int lastWave;
         bool isStarted = false;
+        bool checkVictory = false;
 
 
         Queue<GameObject> spawnQueue;
+        List<Mob> spawnedMobs;
+
+        public Text GameOverText;
+        public Button RestartButton;
+        public GameObject GameOverMenu;
 
         private void Awake()
         {
+            spawnedMobs = new List<Mob>();
             spawnQueue = new Queue<GameObject>();
             lastWaveTime = Time.time - timeBetweenWaves;
             lastSpawnTime = Time.time;
@@ -117,6 +126,10 @@ namespace TD.Managers
                                 lastWave = -1;
                                 isStarted = true;
                             }
+                            else
+                            {
+                                checkVictory = true;
+                            }
                         }
                         
                         
@@ -134,9 +147,34 @@ namespace TD.Managers
             //If the time has passed the alloted time since the last spawn, spawn the next mob in the queue
             if (spawnQueue.Any() && Time.time > lastSpawnTime + timeBetweenSpawns)
             {
-                entry.Spawn(spawnQueue.Dequeue());
+                spawnedMobs.Add(entry.Spawn(spawnQueue.Dequeue()));
                 lastSpawnTime = Time.time;
+                
             }
+
+            if(checkVictory)
+            {
+                if(CheckMobs())
+                {
+                    ClockManager.instance.StopClock();
+                    GameOverMenu.SetActive(true);
+                    RestartButton.gameObject.SetActive(false);
+                    GameOverText.text = "Victory! You haved saved the timeline!";
+                }
+            }
+        }
+
+        bool CheckMobs()
+        {
+            for (int i = 0; i < spawnedMobs.Count; i++)
+            {
+                if(spawnedMobs[i] != null)
+                {
+                    return false;
+                }
+            }
+
+            return true;
         }
     }
 }
