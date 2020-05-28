@@ -120,7 +120,7 @@ NavMeshSettings:
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: a2b3afc99a69f7d49b3e78b3b19d6ca8, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 85da8b9e44b6d8a4c8c8eedf9b3c9d06, type: 2}
 --- !u!1001 &6548221
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5391,13 +5391,16 @@ MonoBehaviour:
 
     - "Esc" to see menu
 
+    - Click on
+    a built turret to upgrade or sell
 
-    - "Constrain
-    Time" to spend some time to slow down all active units
+
+    - "Constrain Time" to spend some time
+    to slow down all active units
 
 
-    Watch your time
-    closely, you can fail by building too much!'
+    Watch your time closely, you can fail by
+    building too much!'
 --- !u!222 &343597015
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11830,7 +11833,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.392}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.6392157}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:

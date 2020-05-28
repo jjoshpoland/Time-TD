@@ -72,7 +72,7 @@ namespace TD.Managers
             isPaused = true;
         }
 
-        public void ActivateMenu()
+        public void ActivatePauseMenu()
         {
             PauseGame();
             PauseMenu.SetActive(true);
@@ -185,11 +185,12 @@ namespace TD.Managers
                 }
                 else if (PauseMenu.activeSelf)
                 {
+                    ResumeGame();
                     PauseMenu.SetActive(false);
                 }
                 else
                 {
-                    ActivateMenu();
+                    ActivatePauseMenu();
                 }
                 
             }
