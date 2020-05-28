@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using TD.Towers;
 using TD.Maps;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 namespace TD.Managers
 {
@@ -80,6 +81,16 @@ namespace TD.Managers
         public void Exit()
         {
             GameManager.instance.ExitToMenu();
+        }
+
+        public void Restart()
+        {
+            GameManager.instance.LoadLevel(SceneManager.GetActiveScene().name);
+        }
+
+        public void SetSpeed(float scale)
+        {
+            Time.timeScale = scale;
         }
 
         /// <summary>
