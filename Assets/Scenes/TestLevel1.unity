@@ -29033,6 +29033,21 @@ PrefabInstance:
       propertyPath: m_Text
       value: Laser Turret (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 1995974245252657477, guid: 135e99c1e4aabd747a2fa89e167a1f3f,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1995974245252657477, guid: 135e99c1e4aabd747a2fa89e167a1f3f,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1995974245252657477, guid: 135e99c1e4aabd747a2fa89e167a1f3f,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3841673612124976549, guid: 135e99c1e4aabd747a2fa89e167a1f3f,
         type: 3}
       propertyPath: m_Text
@@ -29149,11 +29164,37 @@ PrefabInstance:
       propertyPath: StartingTime
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 5940399009553573266, guid: 135e99c1e4aabd747a2fa89e167a1f3f,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5940399009553573266, guid: 135e99c1e4aabd747a2fa89e167a1f3f,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8454581266056933316, guid: 135e99c1e4aabd747a2fa89e167a1f3f,
         type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8454581266056933316, guid: 135e99c1e4aabd747a2fa89e167a1f3f,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: c4f0d0a418f063841b2e3ab3cb0aeeeb, type: 3}
+    - target: {fileID: 8454581266056933316, guid: 135e99c1e4aabd747a2fa89e167a1f3f,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8454581266056933316, guid: 135e99c1e4aabd747a2fa89e167a1f3f,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 3953206724192930684, guid: f418793f488750f44a9d513a860f9f35,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 135e99c1e4aabd747a2fa89e167a1f3f, type: 3}
 --- !u!1001 &4835433911667873533

@@ -5,6 +5,7 @@ using System.Linq.Expressions;
 using TD.AI;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 namespace TD.Managers
 {
@@ -39,6 +40,8 @@ namespace TD.Managers
         public Button RestartButton;
         public GameObject GameOverMenu;
 
+        public UnityEvent OnStart;
+
         private void Awake()
         {
             spawnedMobs = new List<Mob>();
@@ -53,6 +56,7 @@ namespace TD.Managers
             {
                 StartLevel();
             }
+            OnStart.Invoke();
         }
 
         public void StartLevel()
